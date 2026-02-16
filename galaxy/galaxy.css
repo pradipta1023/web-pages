@@ -1,0 +1,2431 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background: black;
+}
+
+.sun {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, yellow, orange, red);
+  z-index: 1;
+  box-shadow: 0 0 1em 1.4em rgba(200, 255, 0, 0.2);
+}
+
+p {
+  color: white;
+  font-size: 6px;
+  box-shadow: 0 0 1.5em 0.5em rgba(255, 255, 255, 0.1);
+}
+#star-0 {
+  position: fixed;
+  top: 14%;
+  left: 54%;
+}
+
+#star-1 {
+  position: fixed;
+  top: 90%;
+  left: 85%;
+}
+
+#star-2 {
+  position: fixed;
+  top: 54%;
+  left: 44%;
+}
+
+#star-3 {
+  position: fixed;
+  top: 20%;
+  left: 41%;
+}
+
+#star-4 {
+  position: fixed;
+  top: 79%;
+  left: 92%;
+}
+
+#star-5 {
+  position: fixed;
+  top: 10%;
+  left: 89%;
+}
+
+#star-6 {
+  position: fixed;
+  top: 51%;
+  left: 95%;
+}
+
+#star-7 {
+  position: fixed;
+  top: 91%;
+  left: 20%;
+}
+
+#star-8 {
+  position: fixed;
+  top: 44%;
+  left: 26%;
+}
+
+#star-9 {
+  position: fixed;
+  top: 78%;
+  left: 24%;
+}
+
+#star-10 {
+  position: fixed;
+  top: 46%;
+  left: 66%;
+}
+
+#star-11 {
+  position: fixed;
+  top: 49%;
+  left: 66%;
+}
+
+#star-12 {
+  position: fixed;
+  top: 13%;
+  left: 73%;
+}
+
+#star-13 {
+  position: fixed;
+  top: 29%;
+  left: 76%;
+}
+
+#star-14 {
+  position: fixed;
+  top: 83%;
+  left: 13%;
+}
+
+#star-15 {
+  position: fixed;
+  top: 17%;
+  left: 83%;
+}
+
+#star-16 {
+  position: fixed;
+  top: 17%;
+  left: 28%;
+}
+
+#star-17 {
+  position: fixed;
+  top: 35%;
+  left: 90%;
+}
+
+#star-18 {
+  position: fixed;
+  top: 32%;
+  left: 87%;
+}
+
+#star-19 {
+  position: fixed;
+  top: 92%;
+  left: 40%;
+}
+
+#star-20 {
+  position: fixed;
+  top: 3%;
+  left: 68%;
+}
+
+#star-21 {
+  position: fixed;
+  top: 99%;
+  left: 19%;
+}
+
+#star-22 {
+  position: fixed;
+  top: 51%;
+  left: 57%;
+}
+
+#star-23 {
+  position: fixed;
+  top: 2%;
+  left: 49%;
+}
+
+#star-24 {
+  position: fixed;
+  top: 31%;
+  left: 92%;
+}
+
+#star-25 {
+  position: fixed;
+  top: 22%;
+  left: 10%;
+}
+
+#star-26 {
+  position: fixed;
+  top: 66%;
+  left: 75%;
+}
+
+#star-27 {
+  position: fixed;
+  top: 29%;
+  left: 63%;
+}
+
+#star-28 {
+  position: fixed;
+  top: 12%;
+  left: 25%;
+}
+
+#star-29 {
+  position: fixed;
+  top: 48%;
+  left: 6%;
+}
+
+#star-30 {
+  position: fixed;
+  top: 8%;
+  left: 3%;
+}
+
+#star-31 {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+}
+
+#star-32 {
+  position: fixed;
+  top: 44%;
+  left: 54%;
+}
+
+#star-33 {
+  position: fixed;
+  top: 72%;
+  left: 25%;
+}
+
+#star-34 {
+  position: fixed;
+  top: 6%;
+  left: 1%;
+}
+
+#star-35 {
+  position: fixed;
+  top: 31%;
+  left: 4%;
+}
+
+#star-36 {
+  position: fixed;
+  top: 79%;
+  left: 87%;
+}
+
+#star-37 {
+  position: fixed;
+  top: 40%;
+  left: 95%;
+}
+
+#star-38 {
+  position: fixed;
+  top: 52%;
+  left: 38%;
+}
+
+#star-39 {
+  position: fixed;
+  top: 48%;
+  left: 67%;
+}
+
+#star-40 {
+  position: fixed;
+  top: 92%;
+  left: 96%;
+}
+
+#star-41 {
+  position: fixed;
+  top: 30%;
+  left: 95%;
+}
+
+#star-42 {
+  position: fixed;
+  top: 8%;
+  left: 85%;
+}
+
+#star-43 {
+  position: fixed;
+  top: 35%;
+  left: 82%;
+}
+
+#star-44 {
+  position: fixed;
+  top: 71%;
+  left: 31%;
+}
+
+#star-45 {
+  position: fixed;
+  top: 63%;
+  left: 42%;
+}
+
+#star-46 {
+  position: fixed;
+  top: 58%;
+  left: 71%;
+}
+
+#star-47 {
+  position: fixed;
+  top: 7%;
+  left: 91%;
+}
+
+#star-48 {
+  position: fixed;
+  top: 94%;
+  left: 3%;
+}
+
+#star-49 {
+  position: fixed;
+  top: 30%;
+  left: 52%;
+}
+
+#star-50 {
+  position: fixed;
+  top: 86%;
+  left: 24%;
+}
+
+#star-51 {
+  position: fixed;
+  top: 12%;
+  left: 3%;
+}
+
+#star-52 {
+  position: fixed;
+  top: 68%;
+  left: 31%;
+}
+
+#star-53 {
+  position: fixed;
+  top: 69%;
+  left: 45%;
+}
+
+#star-54 {
+  position: fixed;
+  top: 44%;
+  left: 69%;
+}
+
+#star-55 {
+  position: fixed;
+  top: 85%;
+  left: 81%;
+}
+
+#star-56 {
+  position: fixed;
+  top: 48%;
+  left: 54%;
+}
+
+#star-57 {
+  position: fixed;
+  top: 67%;
+  left: 79%;
+}
+
+#star-58 {
+  position: fixed;
+  top: 10%;
+  left: 8%;
+}
+
+#star-59 {
+  position: fixed;
+  top: 87%;
+  left: 77%;
+}
+
+#star-60 {
+  position: fixed;
+  top: 98%;
+  left: 34%;
+}
+
+#star-61 {
+  position: fixed;
+  top: 23%;
+  left: 35%;
+}
+
+#star-62 {
+  position: fixed;
+  top: 89%;
+  left: 83%;
+}
+
+#star-63 {
+  position: fixed;
+  top: 19%;
+  left: 76%;
+}
+
+#star-64 {
+  position: fixed;
+  top: 92%;
+  left: 49%;
+}
+
+#star-65 {
+  position: fixed;
+  top: 1%;
+  left: 31%;
+}
+
+#star-66 {
+  position: fixed;
+  top: 13%;
+  left: 70%;
+}
+
+#star-67 {
+  position: fixed;
+  top: 19%;
+  left: 48%;
+}
+
+#star-68 {
+  position: fixed;
+  top: 26%;
+  left: 10%;
+}
+
+#star-69 {
+  position: fixed;
+  top: 61%;
+  left: 1%;
+}
+
+#star-70 {
+  position: fixed;
+  top: 27%;
+  left: 44%;
+}
+
+#star-71 {
+  position: fixed;
+  top: 66%;
+  left: 34%;
+}
+
+#star-72 {
+  position: fixed;
+  top: 37%;
+  left: 90%;
+}
+
+#star-73 {
+  position: fixed;
+  top: 53%;
+  left: 99%;
+}
+
+#star-74 {
+  position: fixed;
+  top: 29%;
+  left: 6%;
+}
+
+#star-75 {
+  position: fixed;
+  top: 95%;
+  left: 19%;
+}
+
+#star-76 {
+  position: fixed;
+  top: 95%;
+  left: 23%;
+}
+
+#star-77 {
+  position: fixed;
+  top: 19%;
+  left: 53%;
+}
+
+#star-78 {
+  position: fixed;
+  top: 50%;
+  left: 39%;
+}
+
+#star-79 {
+  position: fixed;
+  top: 63%;
+  left: 78%;
+}
+
+#star-80 {
+  position: fixed;
+  top: 9%;
+  left: 15%;
+}
+
+#star-81 {
+  position: fixed;
+  top: 62%;
+  left: 86%;
+}
+
+#star-82 {
+  position: fixed;
+  top: 16%;
+  left: 73%;
+}
+
+#star-83 {
+  position: fixed;
+  top: 53%;
+  left: 66%;
+}
+
+#star-84 {
+  position: fixed;
+  top: 67%;
+  left: 2%;
+}
+
+#star-85 {
+  position: fixed;
+  top: 42%;
+  left: 46%;
+}
+
+#star-86 {
+  position: fixed;
+  top: 74%;
+  left: 60%;
+}
+
+#star-87 {
+  position: fixed;
+  top: 39%;
+  left: 92%;
+}
+
+#star-88 {
+  position: fixed;
+  top: 29%;
+  left: 52%;
+}
+
+#star-89 {
+  position: fixed;
+  top: 77%;
+  left: 5%;
+}
+
+#star-90 {
+  position: fixed;
+  top: 45%;
+  left: 27%;
+}
+
+#star-91 {
+  position: fixed;
+  top: 9%;
+  left: 42%;
+}
+
+#star-92 {
+  position: fixed;
+  top: 18%;
+  left: 22%;
+}
+
+#star-93 {
+  position: fixed;
+  top: 43%;
+  left: 59%;
+}
+
+#star-94 {
+  position: fixed;
+  top: 49%;
+  left: 38%;
+}
+
+#star-95 {
+  position: fixed;
+  top: 51%;
+  left: 88%;
+}
+
+#star-96 {
+  position: fixed;
+  top: 24%;
+  left: 50%;
+}
+
+#star-97 {
+  position: fixed;
+  top: 19%;
+  left: 10%;
+}
+
+#star-98 {
+  position: fixed;
+  top: 44%;
+  left: 68%;
+}
+
+#star-99 {
+  position: fixed;
+  top: 26%;
+  left: 34%;
+}
+
+#star-100 {
+  position: fixed;
+  top: 29%;
+  left: 59%;
+}
+
+#star-101 {
+  position: fixed;
+  top: 80%;
+  left: 41%;
+}
+
+#star-102 {
+  position: fixed;
+  top: 32%;
+  left: 47%;
+}
+
+#star-103 {
+  position: fixed;
+  top: 91%;
+  left: 38%;
+}
+
+#star-104 {
+  position: fixed;
+  top: 76%;
+  left: 98%;
+}
+
+#star-105 {
+  position: fixed;
+  top: 54%;
+  left: 26%;
+}
+
+#star-106 {
+  position: fixed;
+  top: 58%;
+  left: 99%;
+}
+
+#star-107 {
+  position: fixed;
+  top: 82%;
+  left: 64%;
+}
+
+#star-108 {
+  position: fixed;
+  top: 4%;
+  left: 1%;
+}
+
+#star-109 {
+  position: fixed;
+  top: 52%;
+  left: 22%;
+}
+
+#star-110 {
+  position: fixed;
+  top: 63%;
+  left: 57%;
+}
+
+#star-111 {
+  position: fixed;
+  top: 23%;
+  left: 67%;
+}
+
+#star-112 {
+  position: fixed;
+  top: 9%;
+  left: 41%;
+}
+
+#star-113 {
+  position: fixed;
+  top: 99%;
+  left: 27%;
+}
+
+#star-114 {
+  position: fixed;
+  top: 10%;
+  left: 65%;
+}
+
+#star-115 {
+  position: fixed;
+  top: 61%;
+  left: 15%;
+}
+
+#star-116 {
+  position: fixed;
+  top: 98%;
+  left: 31%;
+}
+
+#star-117 {
+  position: fixed;
+  top: 67%;
+  left: 71%;
+}
+
+#star-118 {
+  position: fixed;
+  top: 4%;
+  left: 33%;
+}
+
+#star-119 {
+  position: fixed;
+  top: 26%;
+  left: 69%;
+}
+
+#star-120 {
+  position: fixed;
+  top: 36%;
+  left: 87%;
+}
+
+#star-121 {
+  position: fixed;
+  top: 19%;
+  left: 72%;
+}
+
+#star-122 {
+  position: fixed;
+  top: 14%;
+  left: 20%;
+}
+
+#star-123 {
+  position: fixed;
+  top: 98%;
+  left: 42%;
+}
+
+#star-124 {
+  position: fixed;
+  top: 2%;
+  left: 4%;
+}
+
+#star-125 {
+  position: fixed;
+  top: 50%;
+  left: 78%;
+}
+
+#star-126 {
+  position: fixed;
+  top: 77%;
+  left: 74%;
+}
+
+#star-127 {
+  position: fixed;
+  top: 20%;
+  left: 36%;
+}
+
+#star-128 {
+  position: fixed;
+  top: 63%;
+  left: 23%;
+}
+
+#star-129 {
+  position: fixed;
+  top: 7%;
+  left: 53%;
+}
+
+#star-130 {
+  position: fixed;
+  top: 55%;
+  left: 96%;
+}
+
+#star-131 {
+  position: fixed;
+  top: 26%;
+  left: 33%;
+}
+
+#star-132 {
+  position: fixed;
+  top: 14%;
+  left: 43%;
+}
+
+#star-133 {
+  position: fixed;
+  top: 47%;
+  left: 1%;
+}
+
+#star-134 {
+  position: fixed;
+  top: 24%;
+  left: 33%;
+}
+
+#star-135 {
+  position: fixed;
+  top: 85%;
+  left: 41%;
+}
+
+#star-136 {
+  position: fixed;
+  top: 36%;
+  left: 27%;
+}
+
+#star-137 {
+  position: fixed;
+  top: 81%;
+  left: 62%;
+}
+
+#star-138 {
+  position: fixed;
+  top: 80%;
+  left: 25%;
+}
+
+#star-139 {
+  position: fixed;
+  top: 30%;
+  left: 75%;
+}
+
+#star-140 {
+  position: fixed;
+  top: 37%;
+  left: 56%;
+}
+
+#star-141 {
+  position: fixed;
+  top: 33%;
+  left: 86%;
+}
+
+#star-142 {
+  position: fixed;
+  top: 43%;
+  left: 94%;
+}
+
+#star-143 {
+  position: fixed;
+  top: 16%;
+  left: 20%;
+}
+
+#star-144 {
+  position: fixed;
+  top: 57%;
+  left: 99%;
+}
+
+#star-145 {
+  position: fixed;
+  top: 44%;
+  left: 64%;
+}
+
+#star-146 {
+  position: fixed;
+  top: 85%;
+  left: 50%;
+}
+
+#star-147 {
+  position: fixed;
+  top: 31%;
+  left: 12%;
+}
+
+#star-148 {
+  position: fixed;
+  top: 45%;
+  left: 87%;
+}
+
+#star-149 {
+  position: fixed;
+  top: 52%;
+  left: 10%;
+}
+
+#star-150 {
+  position: fixed;
+  top: 58%;
+  left: 72%;
+}
+
+#star-151 {
+  position: fixed;
+  top: 93%;
+  left: 76%;
+}
+
+#star-152 {
+  position: fixed;
+  top: 38%;
+  left: 25%;
+}
+
+#star-153 {
+  position: fixed;
+  top: 43%;
+  left: 33%;
+}
+
+#star-154 {
+  position: fixed;
+  top: 9%;
+  left: 10%;
+}
+
+#star-155 {
+  position: fixed;
+  top: 17%;
+  left: 81%;
+}
+
+#star-156 {
+  position: fixed;
+  top: 61%;
+  left: 57%;
+}
+
+#star-157 {
+  position: fixed;
+  top: 43%;
+  left: 25%;
+}
+
+#star-158 {
+  position: fixed;
+  top: 18%;
+  left: 49%;
+}
+
+#star-159 {
+  position: fixed;
+  top: 85%;
+  left: 83%;
+}
+
+#star-160 {
+  position: fixed;
+  top: 23%;
+  left: 77%;
+}
+
+#star-161 {
+  position: fixed;
+  top: 89%;
+  left: 32%;
+}
+
+#star-162 {
+  position: fixed;
+  top: 79%;
+  left: 91%;
+}
+
+#star-163 {
+  position: fixed;
+  top: 86%;
+  left: 71%;
+}
+
+#star-164 {
+  position: fixed;
+  top: 64%;
+  left: 73%;
+}
+
+#star-165 {
+  position: fixed;
+  top: 91%;
+  left: 16%;
+}
+
+#star-166 {
+  position: fixed;
+  top: 30%;
+  left: 74%;
+}
+
+#star-167 {
+  position: fixed;
+  top: 96%;
+  left: 15%;
+}
+
+#star-168 {
+  position: fixed;
+  top: 58%;
+  left: 35%;
+}
+
+#star-169 {
+  position: fixed;
+  top: 93%;
+  left: 12%;
+}
+
+#star-170 {
+  position: fixed;
+  top: 97%;
+  left: 79%;
+}
+
+#star-171 {
+  position: fixed;
+  top: 25%;
+  left: 65%;
+}
+
+#star-172 {
+  position: fixed;
+  top: 94%;
+  left: 59%;
+}
+
+#star-173 {
+  position: fixed;
+  top: 87%;
+  left: 91%;
+}
+
+#star-174 {
+  position: fixed;
+  top: 32%;
+  left: 23%;
+}
+
+#star-175 {
+  position: fixed;
+  top: 77%;
+  left: 8%;
+}
+
+#star-176 {
+  position: fixed;
+  top: 54%;
+  left: 37%;
+}
+
+#star-177 {
+  position: fixed;
+  top: 68%;
+  left: 7%;
+}
+
+#star-178 {
+  position: fixed;
+  top: 82%;
+  left: 61%;
+}
+
+#star-179 {
+  position: fixed;
+  top: 78%;
+  left: 58%;
+}
+
+#star-180 {
+  position: fixed;
+  top: 36%;
+  left: 56%;
+}
+
+#star-181 {
+  position: fixed;
+  top: 77%;
+  left: 35%;
+}
+
+#star-182 {
+  position: fixed;
+  top: 77%;
+  left: 90%;
+}
+
+#star-183 {
+  position: fixed;
+  top: 89%;
+  left: 13%;
+}
+
+#star-184 {
+  position: fixed;
+  top: 75%;
+  left: 24%;
+}
+
+#star-185 {
+  position: fixed;
+  top: 71%;
+  left: 9%;
+}
+
+#star-186 {
+  position: fixed;
+  top: 19%;
+  left: 83%;
+}
+
+#star-187 {
+  position: fixed;
+  top: 12%;
+  left: 55%;
+}
+
+#star-188 {
+  position: fixed;
+  top: 64%;
+  left: 25%;
+}
+
+#star-189 {
+  position: fixed;
+  top: 33%;
+  left: 93%;
+}
+
+#star-190 {
+  position: fixed;
+  top: 69%;
+  left: 28%;
+}
+
+#star-191 {
+  position: fixed;
+  top: 32%;
+  left: 65%;
+}
+
+#star-192 {
+  position: fixed;
+  top: 19%;
+  left: 33%;
+}
+
+#star-193 {
+  position: fixed;
+  top: 43%;
+  left: 8%;
+}
+
+#star-194 {
+  position: fixed;
+  top: 34%;
+  left: 17%;
+}
+
+#star-195 {
+  position: fixed;
+  top: 15%;
+  left: 32%;
+}
+
+#star-196 {
+  position: fixed;
+  top: 23%;
+  left: 27%;
+}
+
+#star-197 {
+  position: fixed;
+  top: 84%;
+  left: 74%;
+}
+
+#star-198 {
+  position: fixed;
+  top: 85%;
+  left: 72%;
+}
+
+#star-199 {
+  position: fixed;
+  top: 38%;
+  left: 3%;
+}
+
+#star-200 {
+  position: fixed;
+  top: 72%;
+  left: 21%;
+}
+
+#star-201 {
+  position: fixed;
+  top: 80%;
+  left: 8%;
+}
+
+#star-202 {
+  position: fixed;
+  top: 14%;
+  left: 68%;
+}
+
+#star-203 {
+  position: fixed;
+  top: 77%;
+  left: 23%;
+}
+
+#star-204 {
+  position: fixed;
+  top: 96%;
+  left: 57%;
+}
+
+#star-205 {
+  position: fixed;
+  top: 48%;
+  left: 55%;
+}
+
+#star-206 {
+  position: fixed;
+  top: 34%;
+  left: 14%;
+}
+
+#star-207 {
+  position: fixed;
+  top: 50%;
+  left: 15%;
+}
+
+#star-208 {
+  position: fixed;
+  top: 83%;
+  left: 98%;
+}
+
+#star-209 {
+  position: fixed;
+  top: 37%;
+  left: 55%;
+}
+
+#star-210 {
+  position: fixed;
+  top: 75%;
+  left: 11%;
+}
+
+#star-211 {
+  position: fixed;
+  top: 48%;
+  left: 26%;
+}
+
+#star-212 {
+  position: fixed;
+  top: 19%;
+  left: 43%;
+}
+
+#star-213 {
+  position: fixed;
+  top: 72%;
+  left: 65%;
+}
+
+#star-214 {
+  position: fixed;
+  top: 41%;
+  left: 40%;
+}
+
+#star-215 {
+  position: fixed;
+  top: 46%;
+  left: 89%;
+}
+
+#star-216 {
+  position: fixed;
+  top: 76%;
+  left: 97%;
+}
+
+#star-217 {
+  position: fixed;
+  top: 80%;
+  left: 27%;
+}
+
+#star-218 {
+  position: fixed;
+  top: 61%;
+  left: 48%;
+}
+
+#star-219 {
+  position: fixed;
+  top: 62%;
+  left: 5%;
+}
+
+#star-220 {
+  position: fixed;
+  top: 55%;
+  left: 93%;
+}
+
+#star-221 {
+  position: fixed;
+  top: 94%;
+  left: 22%;
+}
+
+#star-222 {
+  position: fixed;
+  top: 59%;
+  left: 96%;
+}
+
+#star-223 {
+  position: fixed;
+  top: 5%;
+  left: 67%;
+}
+
+#star-224 {
+  position: fixed;
+  top: 97%;
+  left: 93%;
+}
+
+#star-225 {
+  position: fixed;
+  top: 84%;
+  left: 86%;
+}
+
+#star-226 {
+  position: fixed;
+  top: 82%;
+  left: 80%;
+}
+
+#star-227 {
+  position: fixed;
+  top: 1%;
+  left: 11%;
+}
+
+#star-228 {
+  position: fixed;
+  top: 44%;
+  left: 30%;
+}
+
+#star-229 {
+  position: fixed;
+  top: 89%;
+  left: 66%;
+}
+
+#star-230 {
+  position: fixed;
+  top: 92%;
+  left: 50%;
+}
+
+#star-231 {
+  position: fixed;
+  top: 89%;
+  left: 19%;
+}
+
+#star-232 {
+  position: fixed;
+  top: 54%;
+  left: 51%;
+}
+
+#star-233 {
+  position: fixed;
+  top: 65%;
+  left: 69%;
+}
+
+#star-234 {
+  position: fixed;
+  top: 61%;
+  left: 65%;
+}
+
+#star-235 {
+  position: fixed;
+  top: 8%;
+  left: 54%;
+}
+
+#star-236 {
+  position: fixed;
+  top: 84%;
+  left: 18%;
+}
+
+#star-237 {
+  position: fixed;
+  top: 50%;
+  left: 13%;
+}
+
+#star-238 {
+  position: fixed;
+  top: 70%;
+  left: 67%;
+}
+
+#star-239 {
+  position: fixed;
+  top: 72%;
+  left: 5%;
+}
+
+#star-240 {
+  position: fixed;
+  top: 7%;
+  left: 99%;
+}
+
+#star-241 {
+  position: fixed;
+  top: 6%;
+  left: 89%;
+}
+
+#star-242 {
+  position: fixed;
+  top: 89%;
+  left: 58%;
+}
+
+#star-243 {
+  position: fixed;
+  top: 35%;
+  left: 26%;
+}
+
+#star-244 {
+  position: fixed;
+  top: 91%;
+  left: 42%;
+}
+
+#star-245 {
+  position: fixed;
+  top: 32%;
+  left: 12%;
+}
+
+#star-246 {
+  position: fixed;
+  top: 39%;
+  left: 79%;
+}
+
+#star-247 {
+  position: fixed;
+  top: 31%;
+  left: 12%;
+}
+
+#star-248 {
+  position: fixed;
+  top: 16%;
+  left: 23%;
+}
+
+#star-249 {
+  position: fixed;
+  top: 21%;
+  left: 78%;
+}
+
+#star-250 {
+  position: fixed;
+  top: 48%;
+  left: 81%;
+}
+
+#star-251 {
+  position: fixed;
+  top: 13%;
+  left: 57%;
+}
+
+#star-252 {
+  position: fixed;
+  top: 91%;
+  left: 86%;
+}
+
+#star-253 {
+  position: fixed;
+  top: 28%;
+  left: 25%;
+}
+
+#star-254 {
+  position: fixed;
+  top: 97%;
+  left: 50%;
+}
+
+#star-255 {
+  position: fixed;
+  top: 64%;
+  left: 0%;
+}
+
+#star-256 {
+  position: fixed;
+  top: 7%;
+  left: 75%;
+}
+
+#star-257 {
+  position: fixed;
+  top: 28%;
+  left: 70%;
+}
+
+#star-258 {
+  position: fixed;
+  top: 76%;
+  left: 16%;
+}
+
+#star-259 {
+  position: fixed;
+  top: 9%;
+  left: 96%;
+}
+
+#star-260 {
+  position: fixed;
+  top: 72%;
+  left: 58%;
+}
+
+#star-261 {
+  position: fixed;
+  top: 28%;
+  left: 0%;
+}
+
+#star-262 {
+  position: fixed;
+  top: 36%;
+  left: 62%;
+}
+
+#star-263 {
+  position: fixed;
+  top: 55%;
+  left: 8%;
+}
+
+#star-264 {
+  position: fixed;
+  top: 19%;
+  left: 76%;
+}
+
+#star-265 {
+  position: fixed;
+  top: 21%;
+  left: 57%;
+}
+
+#star-266 {
+  position: fixed;
+  top: 26%;
+  left: 75%;
+}
+
+#star-267 {
+  position: fixed;
+  top: 31%;
+  left: 58%;
+}
+
+#star-268 {
+  position: fixed;
+  top: 76%;
+  left: 36%;
+}
+
+#star-269 {
+  position: fixed;
+  top: 74%;
+  left: 48%;
+}
+
+#star-270 {
+  position: fixed;
+  top: 65%;
+  left: 92%;
+}
+
+#star-271 {
+  position: fixed;
+  top: 16%;
+  left: 63%;
+}
+
+#star-272 {
+  position: fixed;
+  top: 26%;
+  left: 12%;
+}
+
+#star-273 {
+  position: fixed;
+  top: 64%;
+  left: 90%;
+}
+
+#star-274 {
+  position: fixed;
+  top: 44%;
+  left: 96%;
+}
+
+#star-275 {
+  position: fixed;
+  top: 0%;
+  left: 52%;
+}
+
+#star-276 {
+  position: fixed;
+  top: 74%;
+  left: 87%;
+}
+
+#star-277 {
+  position: fixed;
+  top: 53%;
+  left: 64%;
+}
+
+#star-278 {
+  position: fixed;
+  top: 16%;
+  left: 78%;
+}
+
+#star-279 {
+  position: fixed;
+  top: 87%;
+  left: 88%;
+}
+
+#star-280 {
+  position: fixed;
+  top: 18%;
+  left: 25%;
+}
+
+#star-281 {
+  position: fixed;
+  top: 8%;
+  left: 44%;
+}
+
+#star-282 {
+  position: fixed;
+  top: 66%;
+  left: 48%;
+}
+
+#star-283 {
+  position: fixed;
+  top: 67%;
+  left: 8%;
+}
+
+#star-284 {
+  position: fixed;
+  top: 44%;
+  left: 56%;
+}
+
+#star-285 {
+  position: fixed;
+  top: 10%;
+  left: 52%;
+}
+
+#star-286 {
+  position: fixed;
+  top: 56%;
+  left: 27%;
+}
+
+#star-287 {
+  position: fixed;
+  top: 6%;
+  left: 30%;
+}
+
+#star-288 {
+  position: fixed;
+  top: 11%;
+  left: 93%;
+}
+
+#star-289 {
+  position: fixed;
+  top: 64%;
+  left: 19%;
+}
+
+#star-290 {
+  position: fixed;
+  top: 77%;
+  left: 51%;
+}
+
+#star-291 {
+  position: fixed;
+  top: 27%;
+  left: 27%;
+}
+
+#star-292 {
+  position: fixed;
+  top: 53%;
+  left: 4%;
+}
+
+#star-293 {
+  position: fixed;
+  top: 23%;
+  left: 33%;
+}
+
+#star-294 {
+  position: fixed;
+  top: 83%;
+  left: 75%;
+}
+
+#star-295 {
+  position: fixed;
+  top: 72%;
+  left: 19%;
+}
+
+#star-296 {
+  position: fixed;
+  top: 91%;
+  left: 22%;
+}
+
+#star-297 {
+  position: fixed;
+  top: 8%;
+  left: 48%;
+}
+
+#star-298 {
+  position: fixed;
+  top: 90%;
+  left: 74%;
+}
+
+#star-299 {
+  position: fixed;
+  top: 61%;
+  left: 64%;
+}
+
+#star-300 {
+  position: fixed;
+  top: 31%;
+  left: 90%;
+}
+
+#star-301 {
+  position: fixed;
+  top: 91%;
+  left: 35%;
+}
+
+#star-302 {
+  position: fixed;
+  top: 61%;
+  left: 53%;
+}
+
+#star-303 {
+  position: fixed;
+  top: 56%;
+  left: 69%;
+}
+
+#star-304 {
+  position: fixed;
+  top: 10%;
+  left: 26%;
+}
+
+#star-305 {
+  position: fixed;
+  top: 55%;
+  left: 38%;
+}
+
+#star-306 {
+  position: fixed;
+  top: 20%;
+  left: 67%;
+}
+
+#star-307 {
+  position: fixed;
+  top: 45%;
+  left: 47%;
+}
+
+#star-308 {
+  position: fixed;
+  top: 19%;
+  left: 50%;
+}
+
+#star-309 {
+  position: fixed;
+  top: 29%;
+  left: 76%;
+}
+
+#star-310 {
+  position: fixed;
+  top: 92%;
+  left: 42%;
+}
+
+#star-311 {
+  position: fixed;
+  top: 73%;
+  left: 24%;
+}
+
+#star-312 {
+  position: fixed;
+  top: 96%;
+  left: 89%;
+}
+
+#star-313 {
+  position: fixed;
+  top: 1%;
+  left: 72%;
+}
+
+#star-314 {
+  position: fixed;
+  top: 97%;
+  left: 23%;
+}
+
+#star-315 {
+  position: fixed;
+  top: 56%;
+  left: 96%;
+}
+
+#star-316 {
+  position: fixed;
+  top: 62%;
+  left: 85%;
+}
+
+#star-317 {
+  position: fixed;
+  top: 22%;
+  left: 2%;
+}
+
+#star-318 {
+  position: fixed;
+  top: 66%;
+  left: 29%;
+}
+
+#star-319 {
+  position: fixed;
+  top: 19%;
+  left: 3%;
+}
+
+#star-320 {
+  position: fixed;
+  top: 12%;
+  left: 11%;
+}
+
+#star-321 {
+  position: fixed;
+  top: 86%;
+  left: 9%;
+}
+
+#star-322 {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+}
+
+#star-323 {
+  position: fixed;
+  top: 6%;
+  left: 57%;
+}
+
+#star-324 {
+  position: fixed;
+  top: 5%;
+  left: 68%;
+}
+
+#star-325 {
+  position: fixed;
+  top: 59%;
+  left: 62%;
+}
+
+#star-326 {
+  position: fixed;
+  top: 21%;
+  left: 21%;
+}
+
+#star-327 {
+  position: fixed;
+  top: 40%;
+  left: 4%;
+}
+
+#star-328 {
+  position: fixed;
+  top: 83%;
+  left: 5%;
+}
+
+#star-329 {
+  position: fixed;
+  top: 73%;
+  left: 21%;
+}
+
+#star-330 {
+  position: fixed;
+  top: 66%;
+  left: 85%;
+}
+
+#star-331 {
+  position: fixed;
+  top: 84%;
+  left: 37%;
+}
+
+#star-332 {
+  position: fixed;
+  top: 47%;
+  left: 27%;
+}
+
+#star-333 {
+  position: fixed;
+  top: 5%;
+  left: 68%;
+}
+
+#star-334 {
+  position: fixed;
+  top: 81%;
+  left: 8%;
+}
+
+#star-335 {
+  position: fixed;
+  top: 87%;
+  left: 98%;
+}
+
+#star-336 {
+  position: fixed;
+  top: 75%;
+  left: 21%;
+}
+
+#star-337 {
+  position: fixed;
+  top: 48%;
+  left: 47%;
+}
+
+#star-338 {
+  position: fixed;
+  top: 53%;
+  left: 12%;
+}
+
+#star-339 {
+  position: fixed;
+  top: 96%;
+  left: 43%;
+}
+
+#star-340 {
+  position: fixed;
+  top: 66%;
+  left: 77%;
+}
+
+#star-341 {
+  position: fixed;
+  top: 96%;
+  left: 56%;
+}
+
+#star-342 {
+  position: fixed;
+  top: 21%;
+  left: 49%;
+}
+
+#star-343 {
+  position: fixed;
+  top: 38%;
+  left: 90%;
+}
+
+#star-344 {
+  position: fixed;
+  top: 57%;
+  left: 93%;
+}
+
+#star-345 {
+  position: fixed;
+  top: 94%;
+  left: 59%;
+}
+
+#star-346 {
+  position: fixed;
+  top: 8%;
+  left: 25%;
+}
+
+#star-347 {
+  position: fixed;
+  top: 17%;
+  left: 31%;
+}
+
+#star-348 {
+  position: fixed;
+  top: 76%;
+  left: 91%;
+}
+
+#star-349 {
+  position: fixed;
+  top: 89%;
+  left: 52%;
+}
+
+#star-350 {
+  position: fixed;
+  top: 3%;
+  left: 41%;
+}
+
+#star-351 {
+  position: fixed;
+  top: 65%;
+  left: 92%;
+}
+
+#star-352 {
+  position: fixed;
+  top: 17%;
+  left: 53%;
+}
+
+#star-353 {
+  position: fixed;
+  top: 21%;
+  left: 10%;
+}
+
+#star-354 {
+  position: fixed;
+  top: 28%;
+  left: 81%;
+}
+
+#star-355 {
+  position: fixed;
+  top: 26%;
+  left: 4%;
+}
+
+#star-356 {
+  position: fixed;
+  top: 65%;
+  left: 42%;
+}
+
+#star-357 {
+  position: fixed;
+  top: 23%;
+  left: 58%;
+}
+
+#star-358 {
+  position: fixed;
+  top: 95%;
+  left: 89%;
+}
+
+#star-359 {
+  position: fixed;
+  top: 3%;
+  left: 87%;
+}
+
+#star-360 {
+  position: fixed;
+  top: 11%;
+  left: 90%;
+}
+
+#star-361 {
+  position: fixed;
+  top: 25%;
+  left: 99%;
+}
+
+#star-362 {
+  position: fixed;
+  top: 37%;
+  left: 97%;
+}
+
+#star-363 {
+  position: fixed;
+  top: 27%;
+  left: 58%;
+}
+
+#star-364 {
+  position: fixed;
+  top: 9%;
+  left: 89%;
+}
+
+#star-365 {
+  position: fixed;
+  top: 95%;
+  left: 18%;
+}
+
+#star-366 {
+  position: fixed;
+  top: 20%;
+  left: 49%;
+}
+
+#star-367 {
+  position: fixed;
+  top: 4%;
+  left: 84%;
+}
+
+#star-368 {
+  position: fixed;
+  top: 4%;
+  left: 88%;
+}
+
+#star-369 {
+  position: fixed;
+  top: 82%;
+  left: 13%;
+}
+
+#star-370 {
+  position: fixed;
+  top: 32%;
+  left: 21%;
+}
+
+#star-371 {
+  position: fixed;
+  top: 83%;
+  left: 92%;
+}
+
+#star-372 {
+  position: fixed;
+  top: 73%;
+  left: 27%;
+}
+
+#star-373 {
+  position: fixed;
+  top: 14%;
+  left: 47%;
+}
+
+#star-374 {
+  position: fixed;
+  top: 56%;
+  left: 52%;
+}
+
+#star-375 {
+  position: fixed;
+  top: 92%;
+  left: 56%;
+}
+
+#star-376 {
+  position: fixed;
+  top: 23%;
+  left: 52%;
+}
+
+#star-377 {
+  position: fixed;
+  top: 59%;
+  left: 71%;
+}
+
+#star-378 {
+  position: fixed;
+  top: 44%;
+  left: 29%;
+}
+
+#star-379 {
+  position: fixed;
+  top: 53%;
+  left: 98%;
+}
+
+#star-380 {
+  position: fixed;
+  top: 91%;
+  left: 55%;
+}
+
+#star-381 {
+  position: fixed;
+  top: 61%;
+  left: 47%;
+}
+
+#star-382 {
+  position: fixed;
+  top: 67%;
+  left: 11%;
+}
+
+#star-383 {
+  position: fixed;
+  top: 75%;
+  left: 53%;
+}
+
+#star-384 {
+  position: fixed;
+  top: 38%;
+  left: 75%;
+}
+
+#star-385 {
+  position: fixed;
+  top: 35%;
+  left: 19%;
+}
+
+#star-386 {
+  position: fixed;
+  top: 28%;
+  left: 56%;
+}
+
+#star-387 {
+  position: fixed;
+  top: 80%;
+  left: 46%;
+}
+
+#star-388 {
+  position: fixed;
+  top: 38%;
+  left: 41%;
+}
+
+#star-389 {
+  position: fixed;
+  top: 52%;
+  left: 83%;
+}
+
+#star-390 {
+  position: fixed;
+  top: 37%;
+  left: 56%;
+}
+
+#star-391 {
+  position: fixed;
+  top: 64%;
+  left: 99%;
+}
+
+#star-392 {
+  position: fixed;
+  top: 30%;
+  left: 25%;
+}
+
+#star-393 {
+  position: fixed;
+  top: 26%;
+  left: 78%;
+}
+
+#star-394 {
+  position: fixed;
+  top: 66%;
+  left: 15%;
+}
+
+#star-395 {
+  position: fixed;
+  top: 72%;
+  left: 17%;
+}
+
+#star-396 {
+  position: fixed;
+  top: 95%;
+  left: 18%;
+}
+
+#star-397 {
+  position: fixed;
+  top: 36%;
+  left: 69%;
+}
+
+#star-398 {
+  position: fixed;
+  top: 91%;
+  left: 40%;
+}
+
+#star-399 {
+  position: fixed;
+  top: 73%;
+  left: 28%;
+}
