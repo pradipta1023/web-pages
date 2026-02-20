@@ -1,35 +1,76 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   height: 100vh;
-}
-
-main {
-  height: 100vh;
-  width: 100%;
   background: black;
 }
 
-.sun {
+main {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* padding: 0.2em; */
+  height: 100vh;
+  width: 100%;
+}
+
+#sun {
   position: absolute;
-  top: 5%;
-  left: 3%;
-  height: 200px;
-  width: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 10em;
+  width: 10em;
   border-radius: 50%;
-  background: radial-gradient(circle, yellow, orange, red);
   z-index: 1;
+  background: radial-gradient(circle, yellow, orange, red);
   box-shadow: 0 0 1em 1.4em rgba(200, 255, 0, 0.2);
+}
+
+#orbit-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  z-index: 1;
+  animation: rotatePlanetOrbit 15s linear infinite;
+}
+
+.planet-container {
+  position: relative;
+  left: 50%;
+  top: -8%;
+  height: 16%;
+}
+
+.planet-container img {
+  height: 100%;
+}
+
+@keyframes rotatePlanetOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 p {
   color: white;
   font-size: 6px;
   box-shadow: 0 0 1.5em 0.5em rgba(255, 255, 255, 0.1);
+  z-index: 0;
 }
+
 #star-0 {
   position: fixed;
   top: 14%;
@@ -2428,4 +2469,602 @@ p {
   position: fixed;
   top: 73%;
   left: 28%;
+}
+#star-400 {
+  position: fixed;
+  top: 12%;
+  left: 93%;
+}
+
+#star-401 {
+  position: fixed;
+  top: 53%;
+  left: 11%;
+}
+
+#star-402 {
+  position: fixed;
+  top: 71%;
+  left: 93%;
+}
+
+#star-403 {
+  position: fixed;
+  top: 66%;
+  left: 28%;
+}
+
+#star-404 {
+  position: fixed;
+  top: 90%;
+  left: 91%;
+}
+
+#star-405 {
+  position: fixed;
+  top: 10%;
+  left: 90%;
+}
+
+#star-406 {
+  position: fixed;
+  top: 39%;
+  left: 46%;
+}
+
+#star-407 {
+  position: fixed;
+  top: 52%;
+  left: 81%;
+}
+#star-408 {
+  position: fixed;
+  top: 67%;
+  left: 10%;
+}
+
+#star-409 {
+  position: fixed;
+  top: 79%;
+  left: 95%;
+}
+
+#star-410 {
+  position: fixed;
+  top: 8%;
+  left: 15%;
+}
+
+#star-411 {
+  position: fixed;
+  top: 32%;
+  left: 64%;
+}
+
+#star-412 {
+  position: fixed;
+  top: 93%;
+  left: 70%;
+}
+
+#star-413 {
+  position: fixed;
+  top: 22%;
+  left: 41%;
+}
+
+#star-414 {
+  position: fixed;
+  top: 88%;
+  left: 0%;
+}
+
+#star-415 {
+  position: fixed;
+  top: 90%;
+  left: 56%;
+}
+
+#star-416 {
+  position: fixed;
+  top: 56%;
+  left: 5%;
+}
+
+#star-417 {
+  position: fixed;
+  top: 31%;
+  left: 63%;
+}
+
+#star-418 {
+  position: fixed;
+  top: 48%;
+  left: 91%;
+}
+
+#star-419 {
+  position: fixed;
+  top: 76%;
+  left: 28%;
+}
+
+#star-420 {
+  position: fixed;
+  top: 74%;
+  left: 31%;
+}
+
+#star-421 {
+  position: fixed;
+  top: 19%;
+  left: 79%;
+}
+
+#star-422 {
+  position: fixed;
+  top: 79%;
+  left: 92%;
+}
+
+#star-423 {
+  position: fixed;
+  top: 2%;
+  left: 23%;
+}
+
+#star-424 {
+  position: fixed;
+  top: 83%;
+  left: 8%;
+}
+
+#star-425 {
+  position: fixed;
+  top: 10%;
+  left: 30%;
+}
+
+#star-426 {
+  position: fixed;
+  top: 32%;
+  left: 99%;
+}
+
+#star-427 {
+  position: fixed;
+  top: 36%;
+  left: 42%;
+}
+
+#star-428 {
+  position: fixed;
+  top: 74%;
+  left: 7%;
+}
+
+#star-429 {
+  position: fixed;
+  top: 97%;
+  left: 61%;
+}
+
+#star-430 {
+  position: fixed;
+  top: 72%;
+  left: 53%;
+}
+
+#star-431 {
+  position: fixed;
+  top: 19%;
+  left: 10%;
+}
+
+#star-432 {
+  position: fixed;
+  top: 13%;
+  left: 57%;
+}
+
+#star-433 {
+  position: fixed;
+  top: 79%;
+  left: 60%;
+}
+
+#star-434 {
+  position: fixed;
+  top: 58%;
+  left: 61%;
+}
+
+#star-435 {
+  position: fixed;
+  top: 46%;
+  left: 96%;
+}
+
+#star-436 {
+  position: fixed;
+  top: 18%;
+  left: 80%;
+}
+
+#star-437 {
+  position: fixed;
+  top: 16%;
+  left: 48%;
+}
+
+#star-438 {
+  position: fixed;
+  top: 27%;
+  left: 19%;
+}
+
+#star-439 {
+  position: fixed;
+  top: 40%;
+  left: 96%;
+}
+
+#star-440 {
+  position: fixed;
+  top: 4%;
+  left: 13%;
+}
+
+#star-441 {
+  position: fixed;
+  top: 5%;
+  left: 71%;
+}
+
+#star-442 {
+  position: fixed;
+  top: 6%;
+  left: 76%;
+}
+
+#star-443 {
+  position: fixed;
+  top: 75%;
+  left: 11%;
+}
+
+#star-444 {
+  position: fixed;
+  top: 51%;
+  left: 66%;
+}
+
+#star-445 {
+  position: fixed;
+  top: 18%;
+  left: 55%;
+}
+
+#star-446 {
+  position: fixed;
+  top: 76%;
+  left: 74%;
+}
+
+#star-447 {
+  position: fixed;
+  top: 54%;
+  left: 22%;
+}
+
+#star-448 {
+  position: fixed;
+  top: 29%;
+  left: 54%;
+}
+
+#star-449 {
+  position: fixed;
+  top: 81%;
+  left: 56%;
+}
+
+#star-450 {
+  position: fixed;
+  top: 30%;
+  left: 7%;
+}
+
+#star-451 {
+  position: fixed;
+  top: 77%;
+  left: 79%;
+}
+
+#star-452 {
+  position: fixed;
+  top: 44%;
+  left: 55%;
+}
+
+#star-453 {
+  position: fixed;
+  top: 4%;
+  left: 11%;
+}
+
+#star-454 {
+  position: fixed;
+  top: 38%;
+  left: 94%;
+}
+
+#star-455 {
+  position: fixed;
+  top: 93%;
+  left: 5%;
+}
+
+#star-456 {
+  position: fixed;
+  top: 99%;
+  left: 40%;
+}
+
+#star-457 {
+  position: fixed;
+  top: 27%;
+  left: 41%;
+}
+
+#star-458 {
+  position: fixed;
+  top: 60%;
+  left: 16%;
+}
+
+#star-459 {
+  position: fixed;
+  top: 40%;
+  left: 33%;
+}
+
+#star-460 {
+  position: fixed;
+  top: 56%;
+  left: 44%;
+}
+
+#star-461 {
+  position: fixed;
+  top: 35%;
+  left: 8%;
+}
+
+#star-462 {
+  position: fixed;
+  top: 1%;
+  left: 34%;
+}
+
+#star-463 {
+  position: fixed;
+  top: 85%;
+  left: 60%;
+}
+
+#star-464 {
+  position: fixed;
+  top: 47%;
+  left: 55%;
+}
+
+#star-465 {
+  position: fixed;
+  top: 67%;
+  left: 10%;
+}
+
+#star-466 {
+  position: fixed;
+  top: 21%;
+  left: 55%;
+}
+
+#star-467 {
+  position: fixed;
+  top: 84%;
+  left: 94%;
+}
+
+#star-468 {
+  position: fixed;
+  top: 9%;
+  left: 75%;
+}
+
+#star-469 {
+  position: fixed;
+  top: 37%;
+  left: 57%;
+}
+
+#star-470 {
+  position: fixed;
+  top: 94%;
+  left: 79%;
+}
+
+#star-471 {
+  position: fixed;
+  top: 46%;
+  left: 72%;
+}
+
+#star-472 {
+  position: fixed;
+  top: 7%;
+  left: 5%;
+}
+
+#star-473 {
+  position: fixed;
+  top: 47%;
+  left: 6%;
+}
+
+#star-474 {
+  position: fixed;
+  top: 27%;
+  left: 25%;
+}
+
+#star-475 {
+  position: fixed;
+  top: 7%;
+  left: 93%;
+}
+
+#star-476 {
+  position: fixed;
+  top: 24%;
+  left: 33%;
+}
+
+#star-477 {
+  position: fixed;
+  top: 46%;
+  left: 84%;
+}
+
+#star-478 {
+  position: fixed;
+  top: 3%;
+  left: 51%;
+}
+
+#star-479 {
+  position: fixed;
+  top: 1%;
+  left: 42%;
+}
+
+#star-480 {
+  position: fixed;
+  top: 21%;
+  left: 78%;
+}
+
+#star-481 {
+  position: fixed;
+  top: 51%;
+  left: 33%;
+}
+
+#star-482 {
+  position: fixed;
+  top: 76%;
+  left: 20%;
+}
+
+#star-483 {
+  position: fixed;
+  top: 56%;
+  left: 83%;
+}
+
+#star-484 {
+  position: fixed;
+  top: 20%;
+  left: 0%;
+}
+
+#star-485 {
+  position: fixed;
+  top: 21%;
+  left: 76%;
+}
+
+#star-486 {
+  position: fixed;
+  top: 0%;
+  left: 68%;
+}
+
+#star-487 {
+  position: fixed;
+  top: 45%;
+  left: 76%;
+}
+
+#star-488 {
+  position: fixed;
+  top: 86%;
+  left: 16%;
+}
+
+#star-489 {
+  position: fixed;
+  top: 1%;
+  left: 9%;
+}
+
+#star-490 {
+  position: fixed;
+  top: 16%;
+  left: 53%;
+}
+
+#star-491 {
+  position: fixed;
+  top: 52%;
+  left: 94%;
+}
+
+#star-492 {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+}
+
+#star-493 {
+  position: fixed;
+  top: 80%;
+  left: 22%;
+}
+
+#star-494 {
+  position: fixed;
+  top: 84%;
+  left: 57%;
+}
+
+#star-495 {
+  position: fixed;
+  top: 81%;
+  left: 45%;
+}
+
+#star-496 {
+  position: fixed;
+  top: 8%;
+  left: 43%;
+}
+
+#star-497 {
+  position: fixed;
+  top: 88%;
+  left: 84%;
+}
+
+#star-498 {
+  position: fixed;
+  top: 92%;
+  left: 59%;
+}
+
+#star-499 {
+  position: fixed;
+  top: 78%;
+  left: 32%;
 }

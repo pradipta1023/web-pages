@@ -1,6 +1,6 @@
-const stars = (length) => {
+const starsCss = (length) => {
   const pOfStars = [];
-  for (let i = 100; i < length; i++) {
+  for (let i = 400; i < length; i++) {
     const star = `#star-${i} {
   position: fixed;
   top: ${random(0, 100)}%;
@@ -14,7 +14,7 @@ const stars = (length) => {
 
 const random = (low, high) => Math.floor(low + (Math.random() * (high - low)));
 
-// console.log(stars(400));
+console.log(starsCss(500));
 
 const starsHtml = (length) => {
   const stars = ["⋆", "✦", "✧", "⭑", "★", "☆", "✩", "✬"];
@@ -25,4 +25,4 @@ const starsHtml = (length) => {
   return paras.join("\n");
 };
 
-console.log(starsHtml(500));
+// console.log(starsHtml(500));
