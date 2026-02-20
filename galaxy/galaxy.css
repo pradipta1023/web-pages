@@ -44,6 +44,93 @@ main {
   animation: rotatePlanetOrbit 15s linear infinite;
 }
 
+#orbit-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  z-index: 1;
+  animation: rotatePlanetOrbit 14s linear infinite;
+}
+
+#orbit-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 630px;
+  width: 630px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  z-index: 2;
+  animation: rotatePlanetOrbit 20s linear infinite;
+}
+
+#earth-container {
+  height: 8%;
+  position: relative;
+  top: -4%;
+  left: 50%;
+}
+
+#earth-container img {
+  height: 100%;
+}
+
+#orbit-4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 760px;
+  width: 760px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  z-index: 2;
+  animation: rotatePlanetOrbit 25s linear infinite;
+}
+
+#mars-container {
+  position: relative;
+  height: 10%;
+  left: 50%;
+  top: -5%;
+}
+
+#mars-container img {
+  height: 100%;
+}
+
+#orbit-5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 930px;
+  width: 930px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  z-index: 2;
+  animation: rotatePlanetOrbit 35s linear infinite;
+}
+
+#orbit-6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1170px;
+  width: 1170px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  z-index: 2;
+  animation: rotatePlanetOrbit 45s linear infinite;
+}
+
 .planet-container {
   position: relative;
   left: 50%;
@@ -62,6 +149,17 @@ main {
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+#orbit-7 {
+  position: absolute;
+  top: 6.5%;
+  left: 21%;
+  height: 880px;
+  width: 1200px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  z-index: 2;
 }
 
 p {
