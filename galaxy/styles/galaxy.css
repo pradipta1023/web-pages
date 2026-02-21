@@ -84,8 +84,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 630px;
-  width: 630px;
+  height: 690px;
+  width: 690px;
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
@@ -94,13 +94,35 @@ main {
 
 #earth-container {
   position: absolute;
-  height: 8%;
+  height: 15%;
+  width: 15%;
   left: 50%;
+  top: 0;
 }
 
-#earth-container img {
+#moon-orbit {
+  position: absolute;
+  transform: translate(-50%, -50%);
   height: 100%;
+  width: 100%;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  animation: rotatePlanet 14s linear infinite;
+}
+
+#moon-orbit img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 60%;
   animation: rotatePlanet 7s linear infinite;
+}
+
+#moon-orbit #moon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 40%;
 }
 
 #orbit-4 {
@@ -108,8 +130,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 760px;
-  width: 760px;
+  height: 880px;
+  width: 880px;
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
@@ -132,8 +154,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 930px;
-  width: 930px;
+  height: 1070px;
+  width: 1070px;
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
@@ -142,7 +164,7 @@ main {
 
 #jupiter-container {
   position: absolute;
-  height: 15%;
+  height: 13%;
   left: 50%;
 }
 
@@ -156,8 +178,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 1170px;
-  width: 1170px;
+  height: 1310px;
+  width: 1310px;
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
@@ -167,12 +189,13 @@ main {
 #saturn-container {
   position: absolute;
   height: 13%;
+  /* top: -7%; */
   left: 50%;
 }
 
 #saturn-container img {
   height: 100%;
-  animation: rotatePlanet 4.5s linear infinite;
+  animation: rotatePlanet 100s linear infinite;
 }
 
 .planet-container {
