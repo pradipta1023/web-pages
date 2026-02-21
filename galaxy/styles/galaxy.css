@@ -44,6 +44,17 @@ main {
   animation: rotatePlanetOrbit 15s linear infinite;
 }
 
+#mercury-container {
+  position: relative;
+  left: 50%;
+  height: 16%;
+}
+
+#mercury-container img {
+  height: 100%;
+  animation: rotatePlanet 20s linear infinite;
+}
+
 #orbit-2 {
   position: absolute;
   top: 50%;
@@ -54,7 +65,18 @@ main {
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 1;
-  animation: rotatePlanetOrbit 14s linear infinite;
+  animation: rotatePlanetOrbit 26s linear infinite;
+}
+
+#venus-container {
+  position: relative;
+  left: 50%;
+  height: 16%;
+}
+
+#venus-container img {
+  height: 100%;
+  animation: rotatePlanet 24s linear infinite;
 }
 
 #orbit-3 {
@@ -67,18 +89,18 @@ main {
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
-  animation: rotatePlanetOrbit 20s linear infinite;
+  animation: rotatePlanetOrbit 32s linear infinite;
 }
 
 #earth-container {
+  position: absolute;
   height: 8%;
-  position: relative;
-  top: -4%;
   left: 50%;
 }
 
 #earth-container img {
   height: 100%;
+  animation: rotatePlanet 7s linear infinite;
 }
 
 #orbit-4 {
@@ -91,18 +113,18 @@ main {
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
-  animation: rotatePlanetOrbit 25s linear infinite;
+  animation: rotatePlanetOrbit 43s linear infinite;
 }
 
 #mars-container {
   position: relative;
   height: 10%;
   left: 50%;
-  top: -5%;
 }
 
 #mars-container img {
   height: 100%;
+  animation: rotatePlanet 8s linear infinite;
 }
 
 #orbit-5 {
@@ -115,7 +137,18 @@ main {
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
-  animation: rotatePlanetOrbit 35s linear infinite;
+  animation: rotatePlanetOrbit 65s linear infinite;
+}
+
+#jupiter-container {
+  position: absolute;
+  height: 15%;
+  left: 50%;
+}
+
+#jupiter-container img {
+  height: 100%;
+  animation: rotatePlanet 4s linear infinite;
 }
 
 #orbit-6 {
@@ -128,18 +161,29 @@ main {
   border-radius: 50%;
   border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 2;
-  animation: rotatePlanetOrbit 45s linear infinite;
+  animation: rotatePlanetOrbit 95s linear infinite;
+}
+
+#saturn-container {
+  position: absolute;
+  height: 13%;
+  left: 50%;
+}
+
+#saturn-container img {
+  height: 100%;
+  animation: rotatePlanet 4.5s linear infinite;
 }
 
 .planet-container {
   position: relative;
   left: 50%;
-  top: -8%;
   height: 16%;
 }
 
 .planet-container img {
   height: 100%;
+  animation: rotatePlanet 10s linear infinite;
 }
 
 @keyframes rotatePlanetOrbit {
@@ -151,15 +195,13 @@ main {
   }
 }
 
-#orbit-7 {
-  position: absolute;
-  top: 6.5%;
-  left: 21%;
-  height: 880px;
-  width: 1200px;
-  border-radius: 50%;
-  border: 1px solid rgb(255, 255, 255, 0.5);
-  z-index: 2;
+@keyframes rotatePlanet {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 p {
