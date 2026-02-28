@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+
+      .main-loader {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 50%;
+      }
+
+      .loader {
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        height: 400px;
+        width: 400px;
+        border: 3px;
+        border-style: solid;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+        border-radius: 50%;
+        animation: loader 5s linear infinite;
+      }
+
+      @keyframes loader {
+        0% {
+          transform: rotate(0deg);
+          border-color: rgb(208, 211, 248);
+        }
+        25% {
+          transform: rotate(90deg);
+          border-color: rgb(102, 113, 232);
+        }
+        50% {
+          transform: rotate(180deg);
+          border-color: rgb(211, 42, 42);
+        }
+        75% {
+          transform: rotate(270deg);
+          border-color: rgb(232, 229, 35);
+        }
+        100% {
+          transform: rotate(360deg);
+          border-color: rgb(52, 227, 33);
+        }
+      }
+
+      .loader-text {
+        position: absolute;
+        top: 48%;
+        left: 43%;
+        font-size: 3em;
+        animation: animateText 3s linear infinite alternate-reverse;
+      }
+
+      @keyframes animateText {
+        from {
+          color: white;
+        }
+        to {
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-loader">
+      <div class="loader"></div>
+      <div class="loader-text">Loading...</div>
+    </div>
+  </body>
+</html>

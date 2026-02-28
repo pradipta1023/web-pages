@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background: black;
+  background: linear-gradient(black, rgb(2, 2, 27));
 }
 
 main {
@@ -29,6 +29,20 @@ main {
   z-index: 1;
   background: radial-gradient(circle, yellow, orange, red);
   box-shadow: 0 0 1em 1.4em rgba(200, 255, 0, 0.2);
+  animation: animateSun 5s linear infinite alternate-reverse;
+}
+
+@keyframes animateSun {
+  from {
+    height: 10em;
+    width: 10em;
+    box-shadow: 0 0 1em 1.3em rgb(255, 230, 0, 0.5);
+  }
+  to {
+    height: 10.4em;
+    width: 10.4em;
+    box-shadow: 0 0 1.05em 1.35em rgba(255, 230, 0, 0.9);
+  }
 }
 
 #orbit-1 {
@@ -38,15 +52,14 @@ main {
   transform: translate(-50%, -50%);
   height: 350px;
   width: 350px;
-  border-radius: 50%;
-  border: 1.5px solid rgb(255, 255, 255, 0.5);
   z-index: 1;
   animation: rotatePlanetOrbit 15s linear infinite;
 }
 
 #mercury-container {
   position: relative;
-  left: 50%;
+  top: 15%;
+  left: 15%;
   height: 16%;
 }
 
@@ -63,14 +76,15 @@ main {
   height: 500px;
   width: 500px;
   border-radius: 50%;
-  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  border: 1.3px solid rgb(255, 255, 255, 0.3);
   z-index: 1;
-  animation: rotatePlanetOrbit 26s linear infinite;
+  animation: rotatePlanet 26s linear infinite;
 }
 
 #venus-container {
   position: relative;
-  left: 50%;
+  top: 15%;
+  left: 15%;
   height: 16%;
 }
 
@@ -87,7 +101,7 @@ main {
   height: 690px;
   width: 690px;
   border-radius: 50%;
-  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  border: 1.3px solid rgb(255, 255, 255, 0.3);
   z-index: 2;
   animation: rotatePlanetOrbit 32s linear infinite;
 }
@@ -96,8 +110,8 @@ main {
   position: absolute;
   height: 15%;
   width: 15%;
-  left: 50%;
-  top: 0;
+  top: 15%;
+  left: 15%;
 }
 
 #moon-orbit {
@@ -105,7 +119,7 @@ main {
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
-  border: 1.5px solid white;
+  border: 0px solid white;
   border-radius: 50%;
   animation: rotatePlanet 14s linear infinite;
 }
@@ -120,8 +134,8 @@ main {
 
 #moon-orbit #moon {
   position: absolute;
-  left: 50%;
-  top: 0;
+  top: 15%;
+  left: 15%;
   height: 40%;
 }
 
@@ -133,7 +147,7 @@ main {
   height: 880px;
   width: 880px;
   border-radius: 50%;
-  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  border: 1.3px solid rgb(255, 255, 255, 0.3);
   z-index: 2;
   animation: rotatePlanetOrbit 43s linear infinite;
 }
@@ -141,7 +155,8 @@ main {
 #mars-container {
   position: relative;
   height: 10%;
-  left: 50%;
+  top: 15%;
+  left: 15%;
 }
 
 #mars-container img {
@@ -157,7 +172,7 @@ main {
   height: 1070px;
   width: 1070px;
   border-radius: 50%;
-  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  border: 1.3px solid rgb(255, 255, 255, 0.3);
   z-index: 2;
   animation: rotatePlanetOrbit 65s linear infinite;
 }
@@ -165,7 +180,8 @@ main {
 #jupiter-container {
   position: absolute;
   height: 13%;
-  left: 50%;
+  top: 15%;
+  left: 15%;
 }
 
 #jupiter-container img {
@@ -181,27 +197,37 @@ main {
   height: 1310px;
   width: 1310px;
   border-radius: 50%;
-  border: 1.5px solid rgb(255, 255, 255, 0.5);
+  border: 1.3px solid rgb(255, 255, 255, 0.3);
   z-index: 2;
   animation: rotatePlanetOrbit 95s linear infinite;
+}
+
+#orbit-1, #orbit-2, #orbit-3, #orbit-4, #orbit-5, #orbit-6, #moon-orbit {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+  border-width: 0.2em 0em 0em 0.2em;
 }
 
 #saturn-container {
   position: absolute;
   height: 13%;
-  /* top: -7%; */
-  left: 50%;
+  top: 15%;
+  left: 15%;
 }
 
 #saturn-container img {
   height: 100%;
   animation: rotatePlanet 100s linear infinite;
+
 }
 
 .planet-container {
   position: relative;
   left: 50%;
   height: 16%;
+  top: 15%;
+  left: 15%;
 }
 
 .planet-container img {
@@ -234,3000 +260,3510 @@ p {
   z-index: 0;
 }
 
+@keyframes blinkStar {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
 #star-0 {
   position: fixed;
-  top: 14%;
-  left: 54%;
+  top: 93%;
+  left: 71%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-1 {
   position: fixed;
-  top: 90%;
-  left: 85%;
+  top: 85%;
+  left: 48%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-2 {
   position: fixed;
-  top: 54%;
-  left: 44%;
+  top: 17%;
+  left: 89%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-3 {
   position: fixed;
-  top: 20%;
-  left: 41%;
+  top: 58%;
+  left: 83%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-4 {
   position: fixed;
-  top: 79%;
-  left: 92%;
+  top: 18%;
+  left: 95%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-5 {
   position: fixed;
-  top: 10%;
-  left: 89%;
+  top: 42%;
+  left: 71%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-6 {
   position: fixed;
-  top: 51%;
-  left: 95%;
+  top: 12%;
+  left: 37%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-7 {
   position: fixed;
-  top: 91%;
-  left: 20%;
+  top: 37%;
+  left: 37%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-8 {
   position: fixed;
-  top: 44%;
-  left: 26%;
+  top: 83%;
+  left: 77%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-9 {
   position: fixed;
-  top: 78%;
-  left: 24%;
+  top: 87%;
+  left: 37%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-10 {
   position: fixed;
-  top: 46%;
-  left: 66%;
+  top: 12%;
+  left: 57%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-11 {
   position: fixed;
-  top: 49%;
-  left: 66%;
+  top: 61%;
+  left: 77%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-12 {
   position: fixed;
-  top: 13%;
-  left: 73%;
+  top: 17%;
+  left: 12%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-13 {
   position: fixed;
-  top: 29%;
-  left: 76%;
+  top: 14%;
+  left: 15%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-14 {
   position: fixed;
-  top: 83%;
-  left: 13%;
+  top: 74%;
+  left: 96%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-15 {
   position: fixed;
-  top: 17%;
-  left: 83%;
+  top: 41%;
+  left: 39%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-16 {
   position: fixed;
-  top: 17%;
-  left: 28%;
+  top: 21%;
+  left: 59%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-17 {
   position: fixed;
-  top: 35%;
-  left: 90%;
+  top: 79%;
+  left: 76%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-18 {
   position: fixed;
-  top: 32%;
-  left: 87%;
+  top: 64%;
+  left: 27%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-19 {
   position: fixed;
-  top: 92%;
-  left: 40%;
+  top: 28%;
+  left: 45%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-20 {
   position: fixed;
-  top: 3%;
-  left: 68%;
+  top: 60%;
+  left: 81%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-21 {
   position: fixed;
-  top: 99%;
-  left: 19%;
+  top: 36%;
+  left: 45%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-22 {
   position: fixed;
-  top: 51%;
-  left: 57%;
+  top: 54%;
+  left: 2%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-23 {
   position: fixed;
-  top: 2%;
+  top: 71%;
   left: 49%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-24 {
   position: fixed;
-  top: 31%;
-  left: 92%;
+  top: 28%;
+  left: 36%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-25 {
   position: fixed;
-  top: 22%;
-  left: 10%;
+  top: 46%;
+  left: 59%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-26 {
   position: fixed;
-  top: 66%;
-  left: 75%;
+  top: 25%;
+  left: 20%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-27 {
   position: fixed;
-  top: 29%;
-  left: 63%;
+  top: 43%;
+  left: 32%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-28 {
   position: fixed;
-  top: 12%;
-  left: 25%;
+  top: 83%;
+  left: 90%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-29 {
   position: fixed;
-  top: 48%;
-  left: 6%;
+  top: 98%;
+  left: 23%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-30 {
   position: fixed;
-  top: 8%;
-  left: 3%;
+  top: 84%;
+  left: 50%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-31 {
   position: fixed;
-  top: 15%;
-  left: 15%;
+  top: 53%;
+  left: 58%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-32 {
   position: fixed;
-  top: 44%;
-  left: 54%;
+  top: 21%;
+  left: 78%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-33 {
   position: fixed;
-  top: 72%;
-  left: 25%;
+  top: 79%;
+  left: 68%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-34 {
   position: fixed;
-  top: 6%;
-  left: 1%;
+  top: 90%;
+  left: 13%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-35 {
   position: fixed;
-  top: 31%;
-  left: 4%;
+  top: 64%;
+  left: 76%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-36 {
   position: fixed;
-  top: 79%;
-  left: 87%;
+  top: 41%;
+  left: 2%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-37 {
   position: fixed;
-  top: 40%;
-  left: 95%;
+  top: 35%;
+  left: 50%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-38 {
   position: fixed;
-  top: 52%;
-  left: 38%;
+  top: 1%;
+  left: 87%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-39 {
   position: fixed;
-  top: 48%;
-  left: 67%;
+  top: 66%;
+  left: 96%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-40 {
   position: fixed;
-  top: 92%;
-  left: 96%;
+  top: 89%;
+  left: 69%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-41 {
   position: fixed;
-  top: 30%;
-  left: 95%;
+  top: 23%;
+  left: 89%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-42 {
   position: fixed;
-  top: 8%;
-  left: 85%;
+  top: 11%;
+  left: 38%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-43 {
   position: fixed;
-  top: 35%;
-  left: 82%;
+  top: 59%;
+  left: 36%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-44 {
   position: fixed;
-  top: 71%;
-  left: 31%;
+  top: 93%;
+  left: 24%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-45 {
   position: fixed;
-  top: 63%;
-  left: 42%;
+  top: 79%;
+  left: 99%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-46 {
   position: fixed;
-  top: 58%;
-  left: 71%;
+  top: 16%;
+  left: 74%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-47 {
   position: fixed;
-  top: 7%;
-  left: 91%;
+  top: 83%;
+  left: 83%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-48 {
   position: fixed;
-  top: 94%;
-  left: 3%;
+  top: 98%;
+  left: 64%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-49 {
   position: fixed;
-  top: 30%;
-  left: 52%;
+  top: 84%;
+  left: 6%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-50 {
   position: fixed;
-  top: 86%;
-  left: 24%;
+  top: 39%;
+  left: 9%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-51 {
   position: fixed;
-  top: 12%;
-  left: 3%;
+  top: 14%;
+  left: 30%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-52 {
   position: fixed;
-  top: 68%;
-  left: 31%;
+  top: 82%;
+  left: 11%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-53 {
   position: fixed;
-  top: 69%;
-  left: 45%;
+  top: 19%;
+  left: 77%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-54 {
   position: fixed;
-  top: 44%;
-  left: 69%;
+  top: 51%;
+  left: 81%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-55 {
   position: fixed;
-  top: 85%;
-  left: 81%;
+  top: 34%;
+  left: 4%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-56 {
   position: fixed;
-  top: 48%;
-  left: 54%;
+  top: 51%;
+  left: 50%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-57 {
   position: fixed;
-  top: 67%;
-  left: 79%;
+  top: 94%;
+  left: 15%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-58 {
   position: fixed;
-  top: 10%;
-  left: 8%;
+  top: 44%;
+  left: 51%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-59 {
   position: fixed;
-  top: 87%;
-  left: 77%;
+  top: 67%;
+  left: 10%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-60 {
   position: fixed;
-  top: 98%;
-  left: 34%;
+  top: 77%;
+  left: 11%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-61 {
   position: fixed;
-  top: 23%;
-  left: 35%;
+  top: 70%;
+  left: 49%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-62 {
   position: fixed;
-  top: 89%;
-  left: 83%;
+  top: 85%;
+  left: 47%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-63 {
   position: fixed;
-  top: 19%;
-  left: 76%;
+  top: 36%;
+  left: 37%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-64 {
   position: fixed;
-  top: 92%;
-  left: 49%;
+  top: 37%;
+  left: 26%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-65 {
   position: fixed;
-  top: 1%;
-  left: 31%;
+  top: 98%;
+  left: 38%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-66 {
   position: fixed;
-  top: 13%;
-  left: 70%;
+  top: 62%;
+  left: 67%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-67 {
   position: fixed;
-  top: 19%;
-  left: 48%;
+  top: 74%;
+  left: 16%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-68 {
   position: fixed;
-  top: 26%;
-  left: 10%;
+  top: 35%;
+  left: 70%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-69 {
   position: fixed;
-  top: 61%;
-  left: 1%;
+  top: 55%;
+  left: 25%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-70 {
   position: fixed;
-  top: 27%;
-  left: 44%;
+  top: 80%;
+  left: 21%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-71 {
   position: fixed;
-  top: 66%;
-  left: 34%;
+  top: 23%;
+  left: 6%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-72 {
   position: fixed;
-  top: 37%;
-  left: 90%;
+  top: 40%;
+  left: 73%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-73 {
   position: fixed;
-  top: 53%;
-  left: 99%;
+  top: 73%;
+  left: 4%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-74 {
   position: fixed;
-  top: 29%;
-  left: 6%;
+  top: 98%;
+  left: 48%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-75 {
   position: fixed;
   top: 95%;
-  left: 19%;
+  left: 60%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-76 {
   position: fixed;
-  top: 95%;
-  left: 23%;
+  top: 48%;
+  left: 59%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-77 {
   position: fixed;
-  top: 19%;
-  left: 53%;
+  top: 83%;
+  left: 68%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-78 {
   position: fixed;
-  top: 50%;
-  left: 39%;
+  top: 10%;
+  left: 37%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-79 {
   position: fixed;
-  top: 63%;
-  left: 78%;
+  top: 71%;
+  left: 88%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-80 {
   position: fixed;
-  top: 9%;
-  left: 15%;
+  top: 8%;
+  left: 4%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-81 {
   position: fixed;
-  top: 62%;
-  left: 86%;
+  top: 16%;
+  left: 21%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-82 {
   position: fixed;
-  top: 16%;
-  left: 73%;
+  top: 43%;
+  left: 29%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-83 {
   position: fixed;
-  top: 53%;
-  left: 66%;
+  top: 57%;
+  left: 42%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-84 {
   position: fixed;
-  top: 67%;
-  left: 2%;
+  top: 86%;
+  left: 20%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-85 {
   position: fixed;
-  top: 42%;
-  left: 46%;
+  top: 29%;
+  left: 27%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-86 {
   position: fixed;
-  top: 74%;
-  left: 60%;
+  top: 35%;
+  left: 94%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-87 {
   position: fixed;
-  top: 39%;
-  left: 92%;
+  top: 85%;
+  left: 31%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-88 {
   position: fixed;
-  top: 29%;
-  left: 52%;
+  top: 39%;
+  left: 68%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-89 {
   position: fixed;
-  top: 77%;
-  left: 5%;
+  top: 39%;
+  left: 54%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-90 {
   position: fixed;
-  top: 45%;
-  left: 27%;
+  top: 46%;
+  left: 31%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-91 {
   position: fixed;
-  top: 9%;
-  left: 42%;
+  top: 65%;
+  left: 65%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-92 {
   position: fixed;
-  top: 18%;
-  left: 22%;
+  top: 69%;
+  left: 85%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-93 {
   position: fixed;
-  top: 43%;
-  left: 59%;
+  top: 6%;
+  left: 78%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-94 {
   position: fixed;
-  top: 49%;
-  left: 38%;
+  top: 19%;
+  left: 94%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-95 {
   position: fixed;
-  top: 51%;
-  left: 88%;
+  top: 3%;
+  left: 16%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-96 {
   position: fixed;
-  top: 24%;
-  left: 50%;
+  top: 80%;
+  left: 53%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-97 {
   position: fixed;
-  top: 19%;
-  left: 10%;
+  top: 10%;
+  left: 46%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-98 {
   position: fixed;
-  top: 44%;
-  left: 68%;
+  top: 86%;
+  left: 94%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-99 {
   position: fixed;
-  top: 26%;
-  left: 34%;
+  top: 59%;
+  left: 98%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-100 {
   position: fixed;
-  top: 29%;
-  left: 59%;
+  top: 72%;
+  left: 66%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-101 {
   position: fixed;
-  top: 80%;
-  left: 41%;
+  top: 51%;
+  left: 88%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-102 {
   position: fixed;
-  top: 32%;
-  left: 47%;
+  top: 2%;
+  left: 91%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-103 {
   position: fixed;
-  top: 91%;
-  left: 38%;
+  top: 38%;
+  left: 27%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-104 {
   position: fixed;
-  top: 76%;
-  left: 98%;
+  top: 48%;
+  left: 17%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-105 {
   position: fixed;
-  top: 54%;
-  left: 26%;
+  top: 51%;
+  left: 2%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-106 {
   position: fixed;
-  top: 58%;
-  left: 99%;
+  top: 27%;
+  left: 47%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-107 {
   position: fixed;
-  top: 82%;
-  left: 64%;
+  top: 93%;
+  left: 85%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-108 {
   position: fixed;
-  top: 4%;
-  left: 1%;
+  top: 14%;
+  left: 47%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-109 {
   position: fixed;
-  top: 52%;
-  left: 22%;
+  top: 51%;
+  left: 5%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-110 {
   position: fixed;
-  top: 63%;
-  left: 57%;
+  top: 90%;
+  left: 47%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-111 {
   position: fixed;
-  top: 23%;
-  left: 67%;
+  top: 52%;
+  left: 76%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-112 {
   position: fixed;
-  top: 9%;
-  left: 41%;
+  top: 59%;
+  left: 17%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-113 {
   position: fixed;
-  top: 99%;
-  left: 27%;
+  top: 51%;
+  left: 84%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-114 {
   position: fixed;
-  top: 10%;
-  left: 65%;
+  top: 52%;
+  left: 82%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-115 {
   position: fixed;
-  top: 61%;
-  left: 15%;
+  top: 87%;
+  left: 84%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-116 {
   position: fixed;
-  top: 98%;
-  left: 31%;
+  top: 55%;
+  left: 18%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-117 {
   position: fixed;
-  top: 67%;
-  left: 71%;
+  top: 77%;
+  left: 78%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-118 {
   position: fixed;
-  top: 4%;
-  left: 33%;
+  top: 18%;
+  left: 2%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-119 {
   position: fixed;
-  top: 26%;
-  left: 69%;
+  top: 82%;
+  left: 99%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-120 {
   position: fixed;
-  top: 36%;
-  left: 87%;
+  top: 64%;
+  left: 17%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-121 {
   position: fixed;
-  top: 19%;
-  left: 72%;
+  top: 47%;
+  left: 66%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-122 {
   position: fixed;
-  top: 14%;
-  left: 20%;
+  top: 98%;
+  left: 83%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-123 {
   position: fixed;
-  top: 98%;
-  left: 42%;
+  top: 49%;
+  left: 35%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-124 {
   position: fixed;
-  top: 2%;
-  left: 4%;
+  top: 0%;
+  left: 22%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-125 {
   position: fixed;
-  top: 50%;
-  left: 78%;
+  top: 9%;
+  left: 23%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-126 {
   position: fixed;
-  top: 77%;
-  left: 74%;
+  top: 39%;
+  left: 75%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-127 {
   position: fixed;
-  top: 20%;
-  left: 36%;
+  top: 62%;
+  left: 53%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-128 {
   position: fixed;
-  top: 63%;
-  left: 23%;
+  top: 40%;
+  left: 49%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-129 {
   position: fixed;
-  top: 7%;
-  left: 53%;
+  top: 2%;
+  left: 38%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-130 {
   position: fixed;
-  top: 55%;
-  left: 96%;
+  top: 75%;
+  left: 99%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-131 {
   position: fixed;
-  top: 26%;
-  left: 33%;
+  top: 29%;
+  left: 65%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-132 {
   position: fixed;
-  top: 14%;
-  left: 43%;
+  top: 75%;
+  left: 36%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-133 {
   position: fixed;
-  top: 47%;
-  left: 1%;
+  top: 33%;
+  left: 98%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-134 {
   position: fixed;
-  top: 24%;
-  left: 33%;
+  top: 10%;
+  left: 17%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-135 {
   position: fixed;
-  top: 85%;
-  left: 41%;
+  top: 30%;
+  left: 33%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-136 {
   position: fixed;
-  top: 36%;
-  left: 27%;
+  top: 96%;
+  left: 94%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-137 {
   position: fixed;
-  top: 81%;
-  left: 62%;
+  top: 38%;
+  left: 59%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-138 {
   position: fixed;
-  top: 80%;
-  left: 25%;
+  top: 48%;
+  left: 49%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-139 {
   position: fixed;
-  top: 30%;
-  left: 75%;
+  top: 14%;
+  left: 39%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-140 {
   position: fixed;
-  top: 37%;
-  left: 56%;
+  top: 5%;
+  left: 77%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-141 {
   position: fixed;
-  top: 33%;
-  left: 86%;
+  top: 6%;
+  left: 58%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-142 {
   position: fixed;
-  top: 43%;
-  left: 94%;
+  top: 94%;
+  left: 34%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-143 {
   position: fixed;
-  top: 16%;
-  left: 20%;
+  top: 52%;
+  left: 73%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-144 {
   position: fixed;
-  top: 57%;
-  left: 99%;
+  top: 25%;
+  left: 37%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-145 {
   position: fixed;
-  top: 44%;
-  left: 64%;
+  top: 87%;
+  left: 65%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-146 {
   position: fixed;
-  top: 85%;
-  left: 50%;
+  top: 58%;
+  left: 23%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-147 {
   position: fixed;
-  top: 31%;
-  left: 12%;
+  top: 12%;
+  left: 4%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-148 {
   position: fixed;
-  top: 45%;
-  left: 87%;
+  top: 77%;
+  left: 41%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-149 {
   position: fixed;
-  top: 52%;
-  left: 10%;
+  top: 65%;
+  left: 17%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-150 {
   position: fixed;
-  top: 58%;
-  left: 72%;
+  top: 33%;
+  left: 39%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-151 {
   position: fixed;
   top: 93%;
-  left: 76%;
+  left: 32%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-152 {
   position: fixed;
-  top: 38%;
-  left: 25%;
+  top: 46%;
+  left: 96%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-153 {
   position: fixed;
-  top: 43%;
-  left: 33%;
+  top: 69%;
+  left: 51%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-154 {
   position: fixed;
-  top: 9%;
-  left: 10%;
+  top: 35%;
+  left: 30%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-155 {
   position: fixed;
-  top: 17%;
-  left: 81%;
+  top: 25%;
+  left: 58%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-156 {
   position: fixed;
-  top: 61%;
-  left: 57%;
+  top: 70%;
+  left: 72%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-157 {
   position: fixed;
-  top: 43%;
-  left: 25%;
+  top: 62%;
+  left: 23%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-158 {
   position: fixed;
-  top: 18%;
-  left: 49%;
+  top: 73%;
+  left: 74%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-159 {
   position: fixed;
-  top: 85%;
-  left: 83%;
+  top: 38%;
+  left: 28%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-160 {
   position: fixed;
-  top: 23%;
-  left: 77%;
+  top: 60%;
+  left: 29%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-161 {
   position: fixed;
-  top: 89%;
-  left: 32%;
+  top: 10%;
+  left: 64%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-162 {
   position: fixed;
-  top: 79%;
-  left: 91%;
+  top: 86%;
+  left: 36%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-163 {
   position: fixed;
-  top: 86%;
-  left: 71%;
+  top: 4%;
+  left: 55%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-164 {
   position: fixed;
-  top: 64%;
-  left: 73%;
+  top: 53%;
+  left: 90%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-165 {
   position: fixed;
-  top: 91%;
-  left: 16%;
+  top: 11%;
+  left: 85%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-166 {
   position: fixed;
-  top: 30%;
-  left: 74%;
+  top: 81%;
+  left: 14%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-167 {
   position: fixed;
-  top: 96%;
-  left: 15%;
+  top: 50%;
+  left: 81%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-168 {
   position: fixed;
-  top: 58%;
-  left: 35%;
+  top: 21%;
+  left: 28%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-169 {
   position: fixed;
-  top: 93%;
-  left: 12%;
+  top: 18%;
+  left: 90%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-170 {
   position: fixed;
-  top: 97%;
-  left: 79%;
+  top: 80%;
+  left: 47%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-171 {
   position: fixed;
-  top: 25%;
-  left: 65%;
+  top: 18%;
+  left: 25%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-172 {
   position: fixed;
-  top: 94%;
-  left: 59%;
+  top: 17%;
+  left: 39%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-173 {
   position: fixed;
-  top: 87%;
-  left: 91%;
+  top: 65%;
+  left: 8%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-174 {
   position: fixed;
-  top: 32%;
-  left: 23%;
+  top: 24%;
+  left: 3%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-175 {
   position: fixed;
-  top: 77%;
-  left: 8%;
+  top: 3%;
+  left: 37%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-176 {
   position: fixed;
-  top: 54%;
-  left: 37%;
+  top: 0%;
+  left: 0%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-177 {
   position: fixed;
-  top: 68%;
-  left: 7%;
+  top: 40%;
+  left: 47%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-178 {
   position: fixed;
-  top: 82%;
-  left: 61%;
+  top: 99%;
+  left: 80%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-179 {
   position: fixed;
-  top: 78%;
-  left: 58%;
+  top: 73%;
+  left: 64%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-180 {
   position: fixed;
-  top: 36%;
-  left: 56%;
+  top: 10%;
+  left: 11%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-181 {
   position: fixed;
-  top: 77%;
-  left: 35%;
+  top: 83%;
+  left: 9%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-182 {
   position: fixed;
-  top: 77%;
-  left: 90%;
+  top: 60%;
+  left: 86%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-183 {
   position: fixed;
-  top: 89%;
-  left: 13%;
+  top: 84%;
+  left: 48%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-184 {
   position: fixed;
-  top: 75%;
-  left: 24%;
+  top: 26%;
+  left: 69%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-185 {
   position: fixed;
-  top: 71%;
-  left: 9%;
+  top: 4%;
+  left: 64%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-186 {
   position: fixed;
-  top: 19%;
-  left: 83%;
+  top: 52%;
+  left: 12%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-187 {
   position: fixed;
-  top: 12%;
-  left: 55%;
+  top: 34%;
+  left: 73%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-188 {
   position: fixed;
-  top: 64%;
-  left: 25%;
+  top: 26%;
+  left: 50%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-189 {
   position: fixed;
-  top: 33%;
-  left: 93%;
+  top: 81%;
+  left: 31%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-190 {
   position: fixed;
-  top: 69%;
-  left: 28%;
+  top: 37%;
+  left: 76%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-191 {
   position: fixed;
-  top: 32%;
-  left: 65%;
+  top: 94%;
+  left: 98%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-192 {
   position: fixed;
-  top: 19%;
-  left: 33%;
+  top: 88%;
+  left: 96%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-193 {
   position: fixed;
-  top: 43%;
-  left: 8%;
+  top: 60%;
+  left: 12%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-194 {
   position: fixed;
-  top: 34%;
-  left: 17%;
+  top: 61%;
+  left: 73%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-195 {
   position: fixed;
-  top: 15%;
-  left: 32%;
+  top: 5%;
+  left: 45%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-196 {
   position: fixed;
-  top: 23%;
-  left: 27%;
+  top: 81%;
+  left: 4%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-197 {
   position: fixed;
-  top: 84%;
-  left: 74%;
+  top: 3%;
+  left: 7%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-198 {
   position: fixed;
-  top: 85%;
-  left: 72%;
+  top: 11%;
+  left: 17%;
+  animation: blinkStar 0.9s linear infinite alternate-reverse;
 }
 
 #star-199 {
   position: fixed;
-  top: 38%;
-  left: 3%;
+  top: 84%;
+  left: 62%;
+  animation: blinkStar 0.1s linear infinite alternate-reverse;
 }
 
 #star-200 {
   position: fixed;
-  top: 72%;
-  left: 21%;
+  top: 3%;
+  left: 85%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-201 {
   position: fixed;
-  top: 80%;
-  left: 8%;
+  top: 5%;
+  left: 89%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-202 {
   position: fixed;
-  top: 14%;
-  left: 68%;
+  top: 12%;
+  left: 90%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-203 {
   position: fixed;
-  top: 77%;
-  left: 23%;
+  top: 88%;
+  left: 98%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-204 {
   position: fixed;
-  top: 96%;
-  left: 57%;
+  top: 83%;
+  left: 60%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-205 {
   position: fixed;
-  top: 48%;
-  left: 55%;
+  top: 1%;
+  left: 51%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-206 {
   position: fixed;
-  top: 34%;
-  left: 14%;
+  top: 81%;
+  left: 24%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-207 {
   position: fixed;
-  top: 50%;
-  left: 15%;
+  top: 15%;
+  left: 22%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-208 {
   position: fixed;
-  top: 83%;
-  left: 98%;
+  top: 6%;
+  left: 78%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-209 {
   position: fixed;
-  top: 37%;
-  left: 55%;
+  top: 32%;
+  left: 21%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-210 {
   position: fixed;
-  top: 75%;
-  left: 11%;
+  top: 49%;
+  left: 26%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-211 {
   position: fixed;
-  top: 48%;
-  left: 26%;
+  top: 63%;
+  left: 63%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-212 {
   position: fixed;
-  top: 19%;
-  left: 43%;
+  top: 3%;
+  left: 0%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-213 {
   position: fixed;
-  top: 72%;
-  left: 65%;
+  top: 45%;
+  left: 45%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-214 {
   position: fixed;
-  top: 41%;
-  left: 40%;
+  top: 12%;
+  left: 88%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-215 {
   position: fixed;
-  top: 46%;
-  left: 89%;
+  top: 85%;
+  left: 15%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-216 {
   position: fixed;
-  top: 76%;
-  left: 97%;
+  top: 21%;
+  left: 64%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-217 {
   position: fixed;
-  top: 80%;
-  left: 27%;
+  top: 32%;
+  left: 60%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-218 {
   position: fixed;
-  top: 61%;
-  left: 48%;
+  top: 28%;
+  left: 83%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-219 {
   position: fixed;
-  top: 62%;
-  left: 5%;
+  top: 48%;
+  left: 98%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-220 {
   position: fixed;
-  top: 55%;
-  left: 93%;
+  top: 79%;
+  left: 46%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-221 {
   position: fixed;
-  top: 94%;
-  left: 22%;
+  top: 76%;
+  left: 70%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-222 {
   position: fixed;
-  top: 59%;
-  left: 96%;
+  top: 1%;
+  left: 49%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-223 {
   position: fixed;
-  top: 5%;
-  left: 67%;
+  top: 4%;
+  left: 48%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-224 {
   position: fixed;
-  top: 97%;
-  left: 93%;
+  top: 45%;
+  left: 28%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-225 {
   position: fixed;
-  top: 84%;
-  left: 86%;
+  top: 7%;
+  left: 3%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-226 {
   position: fixed;
-  top: 82%;
-  left: 80%;
+  top: 78%;
+  left: 66%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-227 {
   position: fixed;
-  top: 1%;
-  left: 11%;
+  top: 28%;
+  left: 39%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-228 {
   position: fixed;
-  top: 44%;
-  left: 30%;
+  top: 43%;
+  left: 17%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-229 {
   position: fixed;
-  top: 89%;
-  left: 66%;
+  top: 0%;
+  left: 88%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-230 {
   position: fixed;
-  top: 92%;
-  left: 50%;
+  top: 21%;
+  left: 96%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-231 {
   position: fixed;
-  top: 89%;
-  left: 19%;
+  top: 69%;
+  left: 89%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-232 {
   position: fixed;
-  top: 54%;
-  left: 51%;
+  top: 78%;
+  left: 26%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-233 {
   position: fixed;
-  top: 65%;
-  left: 69%;
+  top: 82%;
+  left: 54%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-234 {
   position: fixed;
-  top: 61%;
-  left: 65%;
+  top: 50%;
+  left: 81%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-235 {
   position: fixed;
-  top: 8%;
-  left: 54%;
+  top: 38%;
+  left: 47%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-236 {
   position: fixed;
-  top: 84%;
-  left: 18%;
+  top: 30%;
+  left: 95%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-237 {
   position: fixed;
-  top: 50%;
-  left: 13%;
+  top: 54%;
+  left: 77%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-238 {
   position: fixed;
-  top: 70%;
-  left: 67%;
+  top: 96%;
+  left: 68%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-239 {
   position: fixed;
-  top: 72%;
-  left: 5%;
+  top: 43%;
+  left: 69%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-240 {
   position: fixed;
-  top: 7%;
-  left: 99%;
+  top: 87%;
+  left: 14%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-241 {
   position: fixed;
-  top: 6%;
-  left: 89%;
+  top: 1%;
+  left: 93%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-242 {
   position: fixed;
-  top: 89%;
-  left: 58%;
+  top: 53%;
+  left: 96%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-243 {
   position: fixed;
-  top: 35%;
-  left: 26%;
+  top: 4%;
+  left: 87%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-244 {
   position: fixed;
-  top: 91%;
-  left: 42%;
+  top: 6%;
+  left: 75%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-245 {
   position: fixed;
-  top: 32%;
-  left: 12%;
+  top: 80%;
+  left: 9%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-246 {
   position: fixed;
-  top: 39%;
-  left: 79%;
+  top: 1%;
+  left: 41%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-247 {
   position: fixed;
-  top: 31%;
-  left: 12%;
+  top: 45%;
+  left: 40%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-248 {
   position: fixed;
-  top: 16%;
-  left: 23%;
+  top: 20%;
+  left: 53%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-249 {
   position: fixed;
-  top: 21%;
-  left: 78%;
+  top: 17%;
+  left: 10%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-250 {
   position: fixed;
-  top: 48%;
-  left: 81%;
+  top: 61%;
+  left: 37%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-251 {
   position: fixed;
-  top: 13%;
-  left: 57%;
+  top: 16%;
+  left: 79%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-252 {
   position: fixed;
-  top: 91%;
-  left: 86%;
+  top: 17%;
+  left: 55%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-253 {
   position: fixed;
-  top: 28%;
-  left: 25%;
+  top: 54%;
+  left: 28%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-254 {
   position: fixed;
-  top: 97%;
-  left: 50%;
+  top: 89%;
+  left: 4%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-255 {
   position: fixed;
-  top: 64%;
-  left: 0%;
+  top: 84%;
+  left: 33%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-256 {
   position: fixed;
-  top: 7%;
-  left: 75%;
+  top: 99%;
+  left: 45%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-257 {
   position: fixed;
-  top: 28%;
-  left: 70%;
+  top: 39%;
+  left: 71%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-258 {
   position: fixed;
-  top: 76%;
-  left: 16%;
+  top: 86%;
+  left: 92%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-259 {
   position: fixed;
-  top: 9%;
-  left: 96%;
+  top: 70%;
+  left: 22%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-260 {
   position: fixed;
-  top: 72%;
-  left: 58%;
+  top: 98%;
+  left: 25%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-261 {
   position: fixed;
-  top: 28%;
-  left: 0%;
+  top: 58%;
+  left: 26%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-262 {
   position: fixed;
-  top: 36%;
-  left: 62%;
+  top: 46%;
+  left: 85%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-263 {
   position: fixed;
-  top: 55%;
-  left: 8%;
+  top: 87%;
+  left: 71%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-264 {
   position: fixed;
-  top: 19%;
-  left: 76%;
+  top: 82%;
+  left: 30%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-265 {
   position: fixed;
-  top: 21%;
-  left: 57%;
+  top: 53%;
+  left: 61%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-266 {
   position: fixed;
-  top: 26%;
-  left: 75%;
+  top: 6%;
+  left: 5%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-267 {
   position: fixed;
-  top: 31%;
-  left: 58%;
+  top: 29%;
+  left: 33%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-268 {
   position: fixed;
-  top: 76%;
+  top: 86%;
   left: 36%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-269 {
   position: fixed;
-  top: 74%;
-  left: 48%;
+  top: 27%;
+  left: 52%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-270 {
   position: fixed;
-  top: 65%;
-  left: 92%;
+  top: 36%;
+  left: 30%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-271 {
   position: fixed;
-  top: 16%;
-  left: 63%;
+  top: 5%;
+  left: 48%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-272 {
   position: fixed;
-  top: 26%;
-  left: 12%;
+  top: 56%;
+  left: 33%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-273 {
   position: fixed;
-  top: 64%;
-  left: 90%;
+  top: 18%;
+  left: 60%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-274 {
   position: fixed;
-  top: 44%;
-  left: 96%;
+  top: 98%;
+  left: 53%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-275 {
   position: fixed;
-  top: 0%;
-  left: 52%;
+  top: 86%;
+  left: 31%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-276 {
   position: fixed;
-  top: 74%;
-  left: 87%;
+  top: 95%;
+  left: 65%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-277 {
   position: fixed;
-  top: 53%;
-  left: 64%;
+  top: 62%;
+  left: 99%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-278 {
   position: fixed;
-  top: 16%;
-  left: 78%;
+  top: 79%;
+  left: 60%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-279 {
   position: fixed;
-  top: 87%;
-  left: 88%;
+  top: 97%;
+  left: 81%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-280 {
   position: fixed;
-  top: 18%;
-  left: 25%;
+  top: 58%;
+  left: 96%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-281 {
   position: fixed;
-  top: 8%;
-  left: 44%;
+  top: 13%;
+  left: 92%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-282 {
   position: fixed;
-  top: 66%;
-  left: 48%;
+  top: 77%;
+  left: 23%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-283 {
   position: fixed;
-  top: 67%;
-  left: 8%;
+  top: 11%;
+  left: 21%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-284 {
   position: fixed;
-  top: 44%;
-  left: 56%;
+  top: 6%;
+  left: 79%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-285 {
   position: fixed;
-  top: 10%;
-  left: 52%;
+  top: 38%;
+  left: 55%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-286 {
   position: fixed;
   top: 56%;
-  left: 27%;
+  left: 52%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-287 {
   position: fixed;
-  top: 6%;
-  left: 30%;
+  top: 85%;
+  left: 44%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-288 {
   position: fixed;
-  top: 11%;
-  left: 93%;
+  top: 56%;
+  left: 38%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-289 {
   position: fixed;
-  top: 64%;
-  left: 19%;
+  top: 96%;
+  left: 24%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-290 {
   position: fixed;
-  top: 77%;
-  left: 51%;
+  top: 35%;
+  left: 87%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-291 {
   position: fixed;
-  top: 27%;
-  left: 27%;
+  top: 32%;
+  left: 31%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-292 {
   position: fixed;
-  top: 53%;
-  left: 4%;
+  top: 24%;
+  left: 20%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-293 {
   position: fixed;
-  top: 23%;
-  left: 33%;
+  top: 33%;
+  left: 11%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-294 {
   position: fixed;
-  top: 83%;
-  left: 75%;
+  top: 16%;
+  left: 31%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-295 {
   position: fixed;
-  top: 72%;
-  left: 19%;
+  top: 79%;
+  left: 92%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-296 {
   position: fixed;
-  top: 91%;
-  left: 22%;
+  top: 4%;
+  left: 13%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-297 {
   position: fixed;
-  top: 8%;
-  left: 48%;
+  top: 61%;
+  left: 98%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-298 {
   position: fixed;
-  top: 90%;
-  left: 74%;
+  top: 49%;
+  left: 36%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-299 {
   position: fixed;
-  top: 61%;
-  left: 64%;
+  top: 74%;
+  left: 2%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-300 {
   position: fixed;
-  top: 31%;
-  left: 90%;
+  top: 81%;
+  left: 85%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-301 {
   position: fixed;
-  top: 91%;
-  left: 35%;
+  top: 21%;
+  left: 37%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-302 {
   position: fixed;
-  top: 61%;
-  left: 53%;
+  top: 85%;
+  left: 9%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-303 {
   position: fixed;
-  top: 56%;
-  left: 69%;
+  top: 45%;
+  left: 1%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-304 {
   position: fixed;
-  top: 10%;
-  left: 26%;
+  top: 53%;
+  left: 64%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-305 {
   position: fixed;
-  top: 55%;
-  left: 38%;
+  top: 79%;
+  left: 57%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-306 {
   position: fixed;
-  top: 20%;
-  left: 67%;
+  top: 58%;
+  left: 87%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-307 {
   position: fixed;
-  top: 45%;
-  left: 47%;
+  top: 54%;
+  left: 44%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-308 {
   position: fixed;
-  top: 19%;
-  left: 50%;
+  top: 30%;
+  left: 9%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-309 {
   position: fixed;
-  top: 29%;
-  left: 76%;
+  top: 86%;
+  left: 20%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-310 {
   position: fixed;
-  top: 92%;
-  left: 42%;
+  top: 30%;
+  left: 59%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-311 {
   position: fixed;
-  top: 73%;
-  left: 24%;
+  top: 65%;
+  left: 14%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-312 {
   position: fixed;
-  top: 96%;
-  left: 89%;
+  top: 91%;
+  left: 96%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-313 {
   position: fixed;
-  top: 1%;
-  left: 72%;
+  top: 82%;
+  left: 35%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-314 {
   position: fixed;
-  top: 97%;
-  left: 23%;
+  top: 71%;
+  left: 7%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-315 {
   position: fixed;
-  top: 56%;
-  left: 96%;
+  top: 68%;
+  left: 67%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-316 {
   position: fixed;
-  top: 62%;
-  left: 85%;
+  top: 83%;
+  left: 93%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-317 {
   position: fixed;
-  top: 22%;
-  left: 2%;
+  top: 50%;
+  left: 42%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-318 {
   position: fixed;
-  top: 66%;
-  left: 29%;
+  top: 77%;
+  left: 89%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-319 {
   position: fixed;
-  top: 19%;
-  left: 3%;
+  top: 55%;
+  left: 15%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-320 {
   position: fixed;
-  top: 12%;
-  left: 11%;
+  top: 68%;
+  left: 15%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-321 {
   position: fixed;
-  top: 86%;
-  left: 9%;
+  top: 80%;
+  left: 54%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-322 {
   position: fixed;
-  top: 50%;
-  left: 40%;
+  top: 96%;
+  left: 87%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-323 {
   position: fixed;
-  top: 6%;
-  left: 57%;
+  top: 38%;
+  left: 54%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-324 {
   position: fixed;
-  top: 5%;
-  left: 68%;
+  top: 55%;
+  left: 8%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-325 {
   position: fixed;
-  top: 59%;
-  left: 62%;
+  top: 29%;
+  left: 70%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-326 {
   position: fixed;
-  top: 21%;
-  left: 21%;
+  top: 97%;
+  left: 13%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-327 {
   position: fixed;
-  top: 40%;
-  left: 4%;
+  top: 71%;
+  left: 29%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-328 {
   position: fixed;
-  top: 83%;
-  left: 5%;
+  top: 90%;
+  left: 40%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-329 {
   position: fixed;
-  top: 73%;
-  left: 21%;
+  top: 38%;
+  left: 58%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-330 {
   position: fixed;
-  top: 66%;
-  left: 85%;
+  top: 71%;
+  left: 18%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-331 {
   position: fixed;
-  top: 84%;
-  left: 37%;
+  top: 67%;
+  left: 47%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-332 {
   position: fixed;
-  top: 47%;
-  left: 27%;
+  top: 60%;
+  left: 10%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-333 {
   position: fixed;
-  top: 5%;
-  left: 68%;
+  top: 33%;
+  left: 72%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-334 {
   position: fixed;
-  top: 81%;
-  left: 8%;
+  top: 87%;
+  left: 83%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-335 {
   position: fixed;
-  top: 87%;
-  left: 98%;
+  top: 46%;
+  left: 89%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-336 {
   position: fixed;
-  top: 75%;
-  left: 21%;
+  top: 3%;
+  left: 24%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-337 {
   position: fixed;
-  top: 48%;
-  left: 47%;
+  top: 3%;
+  left: 74%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-338 {
   position: fixed;
-  top: 53%;
-  left: 12%;
+  top: 37%;
+  left: 26%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-339 {
   position: fixed;
-  top: 96%;
-  left: 43%;
+  top: 45%;
+  left: 87%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-340 {
   position: fixed;
-  top: 66%;
-  left: 77%;
+  top: 80%;
+  left: 35%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-341 {
   position: fixed;
-  top: 96%;
-  left: 56%;
+  top: 98%;
+  left: 38%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-342 {
   position: fixed;
-  top: 21%;
-  left: 49%;
+  top: 72%;
+  left: 19%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-343 {
   position: fixed;
-  top: 38%;
-  left: 90%;
+  top: 83%;
+  left: 97%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-344 {
   position: fixed;
-  top: 57%;
-  left: 93%;
+  top: 53%;
+  left: 82%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-345 {
   position: fixed;
-  top: 94%;
-  left: 59%;
+  top: 79%;
+  left: 48%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-346 {
   position: fixed;
-  top: 8%;
-  left: 25%;
+  top: 42%;
+  left: 39%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-347 {
   position: fixed;
-  top: 17%;
-  left: 31%;
+  top: 5%;
+  left: 26%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-348 {
   position: fixed;
-  top: 76%;
-  left: 91%;
+  top: 64%;
+  left: 86%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-349 {
   position: fixed;
-  top: 89%;
-  left: 52%;
+  top: 24%;
+  left: 36%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-350 {
   position: fixed;
-  top: 3%;
-  left: 41%;
+  top: 31%;
+  left: 66%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-351 {
   position: fixed;
-  top: 65%;
-  left: 92%;
+  top: 43%;
+  left: 89%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-352 {
   position: fixed;
-  top: 17%;
-  left: 53%;
+  top: 49%;
+  left: 90%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-353 {
   position: fixed;
-  top: 21%;
-  left: 10%;
+  top: 76%;
+  left: 86%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-354 {
   position: fixed;
-  top: 28%;
-  left: 81%;
+  top: 60%;
+  left: 30%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-355 {
   position: fixed;
-  top: 26%;
-  left: 4%;
+  top: 96%;
+  left: 56%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-356 {
   position: fixed;
-  top: 65%;
-  left: 42%;
+  top: 17%;
+  left: 90%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-357 {
   position: fixed;
-  top: 23%;
-  left: 58%;
+  top: 71%;
+  left: 94%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-358 {
   position: fixed;
-  top: 95%;
-  left: 89%;
+  top: 85%;
+  left: 35%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-359 {
   position: fixed;
-  top: 3%;
-  left: 87%;
+  top: 59%;
+  left: 42%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-360 {
   position: fixed;
-  top: 11%;
-  left: 90%;
+  top: 82%;
+  left: 64%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-361 {
   position: fixed;
-  top: 25%;
-  left: 99%;
+  top: 29%;
+  left: 25%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-362 {
   position: fixed;
-  top: 37%;
-  left: 97%;
+  top: 93%;
+  left: 75%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-363 {
   position: fixed;
-  top: 27%;
-  left: 58%;
+  top: 42%;
+  left: 87%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-364 {
   position: fixed;
-  top: 9%;
-  left: 89%;
+  top: 31%;
+  left: 37%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-365 {
   position: fixed;
-  top: 95%;
-  left: 18%;
+  top: 46%;
+  left: 79%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-366 {
   position: fixed;
-  top: 20%;
-  left: 49%;
+  top: 16%;
+  left: 4%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-367 {
   position: fixed;
-  top: 4%;
-  left: 84%;
+  top: 19%;
+  left: 85%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-368 {
   position: fixed;
-  top: 4%;
-  left: 88%;
+  top: 65%;
+  left: 79%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-369 {
   position: fixed;
-  top: 82%;
-  left: 13%;
+  top: 41%;
+  left: 99%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-370 {
   position: fixed;
-  top: 32%;
-  left: 21%;
+  top: 31%;
+  left: 58%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-371 {
   position: fixed;
-  top: 83%;
-  left: 92%;
+  top: 43%;
+  left: 56%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-372 {
   position: fixed;
-  top: 73%;
-  left: 27%;
+  top: 42%;
+  left: 20%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-373 {
   position: fixed;
-  top: 14%;
-  left: 47%;
+  top: 55%;
+  left: 89%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-374 {
   position: fixed;
-  top: 56%;
-  left: 52%;
+  top: 83%;
+  left: 17%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-375 {
   position: fixed;
-  top: 92%;
-  left: 56%;
+  top: 73%;
+  left: 4%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-376 {
   position: fixed;
-  top: 23%;
-  left: 52%;
+  top: 77%;
+  left: 8%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-377 {
   position: fixed;
-  top: 59%;
-  left: 71%;
+  top: 43%;
+  left: 27%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-378 {
   position: fixed;
-  top: 44%;
-  left: 29%;
+  top: 67%;
+  left: 34%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-379 {
   position: fixed;
-  top: 53%;
-  left: 98%;
+  top: 2%;
+  left: 94%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-380 {
   position: fixed;
-  top: 91%;
-  left: 55%;
+  top: 87%;
+  left: 92%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-381 {
   position: fixed;
-  top: 61%;
-  left: 47%;
+  top: 79%;
+  left: 2%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-382 {
   position: fixed;
-  top: 67%;
-  left: 11%;
+  top: 80%;
+  left: 65%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-383 {
   position: fixed;
-  top: 75%;
-  left: 53%;
+  top: 73%;
+  left: 31%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-384 {
   position: fixed;
-  top: 38%;
-  left: 75%;
+  top: 50%;
+  left: 47%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-385 {
   position: fixed;
-  top: 35%;
-  left: 19%;
+  top: 67%;
+  left: 76%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-386 {
   position: fixed;
-  top: 28%;
-  left: 56%;
+  top: 54%;
+  left: 90%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-387 {
   position: fixed;
-  top: 80%;
-  left: 46%;
+  top: 68%;
+  left: 42%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-388 {
   position: fixed;
-  top: 38%;
-  left: 41%;
+  top: 26%;
+  left: 13%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-389 {
   position: fixed;
-  top: 52%;
-  left: 83%;
+  top: 23%;
+  left: 17%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-390 {
   position: fixed;
-  top: 37%;
-  left: 56%;
+  top: 21%;
+  left: 44%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-391 {
   position: fixed;
-  top: 64%;
-  left: 99%;
+  top: 80%;
+  left: 38%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-392 {
   position: fixed;
-  top: 30%;
-  left: 25%;
+  top: 94%;
+  left: 17%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-393 {
   position: fixed;
-  top: 26%;
-  left: 78%;
+  top: 15%;
+  left: 19%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-394 {
   position: fixed;
-  top: 66%;
-  left: 15%;
+  top: 74%;
+  left: 26%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-395 {
   position: fixed;
-  top: 72%;
-  left: 17%;
+  top: 89%;
+  left: 82%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-396 {
   position: fixed;
-  top: 95%;
-  left: 18%;
+  top: 4%;
+  left: 52%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-397 {
   position: fixed;
   top: 36%;
-  left: 69%;
+  left: 96%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-398 {
   position: fixed;
-  top: 91%;
-  left: 40%;
+  top: 0%;
+  left: 13%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
 
 #star-399 {
   position: fixed;
-  top: 73%;
-  left: 28%;
+  top: 32%;
+  left: 38%;
+  animation: blinkStar 1s linear infinite alternate-reverse;
 }
+
 #star-400 {
   position: fixed;
-  top: 12%;
-  left: 93%;
+  top: 43%;
+  left: 34%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-401 {
   position: fixed;
-  top: 53%;
-  left: 11%;
+  top: 97%;
+  left: 12%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-402 {
   position: fixed;
-  top: 71%;
-  left: 93%;
+  top: 37%;
+  left: 30%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-403 {
   position: fixed;
-  top: 66%;
-  left: 28%;
+  top: 94%;
+  left: 94%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-404 {
   position: fixed;
-  top: 90%;
-  left: 91%;
+  top: 12%;
+  left: 19%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-405 {
   position: fixed;
-  top: 10%;
-  left: 90%;
+  top: 18%;
+  left: 61%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-406 {
   position: fixed;
-  top: 39%;
-  left: 46%;
+  top: 61%;
+  left: 98%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-407 {
   position: fixed;
-  top: 52%;
-  left: 81%;
+  top: 14%;
+  left: 33%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
+
 #star-408 {
   position: fixed;
-  top: 67%;
-  left: 10%;
+  top: 85%;
+  left: 72%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-409 {
   position: fixed;
-  top: 79%;
-  left: 95%;
+  top: 4%;
+  left: 45%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-410 {
   position: fixed;
-  top: 8%;
-  left: 15%;
+  top: 86%;
+  left: 86%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-411 {
   position: fixed;
-  top: 32%;
-  left: 64%;
+  top: 28%;
+  left: 28%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-412 {
   position: fixed;
-  top: 93%;
-  left: 70%;
+  top: 95%;
+  left: 48%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-413 {
   position: fixed;
-  top: 22%;
-  left: 41%;
+  top: 39%;
+  left: 24%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-414 {
   position: fixed;
-  top: 88%;
-  left: 0%;
+  top: 9%;
+  left: 31%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-415 {
   position: fixed;
-  top: 90%;
-  left: 56%;
+  top: 31%;
+  left: 94%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-416 {
   position: fixed;
-  top: 56%;
-  left: 5%;
+  top: 27%;
+  left: 54%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-417 {
   position: fixed;
-  top: 31%;
-  left: 63%;
+  top: 70%;
+  left: 45%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-418 {
   position: fixed;
-  top: 48%;
-  left: 91%;
+  top: 85%;
+  left: 54%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-419 {
   position: fixed;
-  top: 76%;
-  left: 28%;
+  top: 94%;
+  left: 76%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-420 {
   position: fixed;
-  top: 74%;
-  left: 31%;
+  top: 66%;
+  left: 32%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-421 {
   position: fixed;
-  top: 19%;
-  left: 79%;
+  top: 6%;
+  left: 86%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-422 {
   position: fixed;
-  top: 79%;
-  left: 92%;
+  top: 37%;
+  left: 1%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-423 {
   position: fixed;
-  top: 2%;
-  left: 23%;
+  top: 18%;
+  left: 38%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-424 {
   position: fixed;
-  top: 83%;
-  left: 8%;
+  top: 85%;
+  left: 24%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-425 {
   position: fixed;
-  top: 10%;
-  left: 30%;
+  top: 20%;
+  left: 2%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-426 {
   position: fixed;
-  top: 32%;
-  left: 99%;
+  top: 95%;
+  left: 91%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-427 {
   position: fixed;
-  top: 36%;
-  left: 42%;
+  top: 43%;
+  left: 28%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-428 {
   position: fixed;
-  top: 74%;
-  left: 7%;
+  top: 84%;
+  left: 9%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-429 {
   position: fixed;
-  top: 97%;
-  left: 61%;
+  top: 94%;
+  left: 70%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-430 {
   position: fixed;
-  top: 72%;
-  left: 53%;
+  top: 86%;
+  left: 59%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-431 {
   position: fixed;
-  top: 19%;
-  left: 10%;
+  top: 67%;
+  left: 34%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-432 {
   position: fixed;
-  top: 13%;
-  left: 57%;
+  top: 77%;
+  left: 67%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-433 {
   position: fixed;
-  top: 79%;
-  left: 60%;
+  top: 94%;
+  left: 6%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-434 {
   position: fixed;
-  top: 58%;
-  left: 61%;
+  top: 30%;
+  left: 53%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-435 {
   position: fixed;
-  top: 46%;
-  left: 96%;
+  top: 52%;
+  left: 69%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-436 {
   position: fixed;
-  top: 18%;
-  left: 80%;
+  top: 30%;
+  left: 72%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-437 {
   position: fixed;
-  top: 16%;
-  left: 48%;
+  top: 11%;
+  left: 95%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-438 {
   position: fixed;
-  top: 27%;
-  left: 19%;
+  top: 51%;
+  left: 73%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-439 {
   position: fixed;
-  top: 40%;
-  left: 96%;
+  top: 39%;
+  left: 42%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-440 {
   position: fixed;
-  top: 4%;
-  left: 13%;
+  top: 14%;
+  left: 98%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-441 {
   position: fixed;
-  top: 5%;
-  left: 71%;
+  top: 16%;
+  left: 83%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-442 {
   position: fixed;
-  top: 6%;
-  left: 76%;
+  top: 30%;
+  left: 65%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-443 {
   position: fixed;
-  top: 75%;
-  left: 11%;
+  top: 48%;
+  left: 16%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-444 {
   position: fixed;
-  top: 51%;
-  left: 66%;
+  top: 68%;
+  left: 19%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-445 {
   position: fixed;
-  top: 18%;
-  left: 55%;
+  top: 92%;
+  left: 51%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-446 {
   position: fixed;
-  top: 76%;
-  left: 74%;
+  top: 19%;
+  left: 36%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-447 {
   position: fixed;
-  top: 54%;
-  left: 22%;
+  top: 22%;
+  left: 92%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-448 {
   position: fixed;
-  top: 29%;
-  left: 54%;
+  top: 41%;
+  left: 14%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-449 {
   position: fixed;
-  top: 81%;
-  left: 56%;
+  top: 93%;
+  left: 45%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-450 {
   position: fixed;
-  top: 30%;
-  left: 7%;
+  top: 52%;
+  left: 36%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-451 {
   position: fixed;
-  top: 77%;
-  left: 79%;
+  top: 2%;
+  left: 32%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-452 {
   position: fixed;
-  top: 44%;
-  left: 55%;
+  top: 1%;
+  left: 39%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-453 {
   position: fixed;
-  top: 4%;
-  left: 11%;
+  top: 3%;
+  left: 55%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-454 {
   position: fixed;
-  top: 38%;
-  left: 94%;
+  top: 52%;
+  left: 60%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-455 {
   position: fixed;
-  top: 93%;
-  left: 5%;
+  top: 88%;
+  left: 4%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-456 {
   position: fixed;
-  top: 99%;
-  left: 40%;
+  top: 35%;
+  left: 21%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-457 {
   position: fixed;
-  top: 27%;
+  top: 29%;
   left: 41%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-458 {
   position: fixed;
-  top: 60%;
-  left: 16%;
+  top: 97%;
+  left: 87%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-459 {
   position: fixed;
-  top: 40%;
-  left: 33%;
+  top: 18%;
+  left: 67%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-460 {
   position: fixed;
-  top: 56%;
-  left: 44%;
+  top: 82%;
+  left: 6%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-461 {
   position: fixed;
-  top: 35%;
-  left: 8%;
+  top: 43%;
+  left: 26%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-462 {
   position: fixed;
-  top: 1%;
-  left: 34%;
+  top: 45%;
+  left: 98%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-463 {
   position: fixed;
-  top: 85%;
-  left: 60%;
+  top: 66%;
+  left: 1%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-464 {
   position: fixed;
-  top: 47%;
-  left: 55%;
+  top: 81%;
+  left: 76%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-465 {
   position: fixed;
-  top: 67%;
-  left: 10%;
+  top: 76%;
+  left: 85%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-466 {
   position: fixed;
-  top: 21%;
-  left: 55%;
+  top: 74%;
+  left: 25%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-467 {
   position: fixed;
-  top: 84%;
-  left: 94%;
+  top: 13%;
+  left: 55%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-468 {
   position: fixed;
-  top: 9%;
-  left: 75%;
+  top: 74%;
+  left: 97%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-469 {
   position: fixed;
-  top: 37%;
-  left: 57%;
+  top: 14%;
+  left: 66%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-470 {
   position: fixed;
-  top: 94%;
-  left: 79%;
+  top: 20%;
+  left: 20%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-471 {
   position: fixed;
-  top: 46%;
-  left: 72%;
+  top: 6%;
+  left: 28%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-472 {
   position: fixed;
-  top: 7%;
-  left: 5%;
+  top: 78%;
+  left: 93%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-473 {
   position: fixed;
-  top: 47%;
-  left: 6%;
+  top: 1%;
+  left: 38%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-474 {
   position: fixed;
-  top: 27%;
-  left: 25%;
+  top: 90%;
+  left: 21%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-475 {
   position: fixed;
-  top: 7%;
-  left: 93%;
+  top: 31%;
+  left: 23%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-476 {
   position: fixed;
-  top: 24%;
-  left: 33%;
+  top: 58%;
+  left: 54%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-477 {
   position: fixed;
-  top: 46%;
-  left: 84%;
+  top: 94%;
+  left: 18%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-478 {
   position: fixed;
-  top: 3%;
-  left: 51%;
+  top: 72%;
+  left: 29%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-479 {
   position: fixed;
-  top: 1%;
-  left: 42%;
+  top: 21%;
+  left: 34%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-480 {
   position: fixed;
-  top: 21%;
-  left: 78%;
+  top: 55%;
+  left: 11%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-481 {
   position: fixed;
-  top: 51%;
-  left: 33%;
+  top: 84%;
+  left: 74%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-482 {
   position: fixed;
-  top: 76%;
-  left: 20%;
+  top: 62%;
+  left: 49%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-483 {
   position: fixed;
-  top: 56%;
-  left: 83%;
+  top: 65%;
+  left: 72%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-484 {
   position: fixed;
-  top: 20%;
-  left: 0%;
+  top: 60%;
+  left: 20%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-485 {
   position: fixed;
-  top: 21%;
-  left: 76%;
+  top: 37%;
+  left: 46%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-486 {
   position: fixed;
-  top: 0%;
-  left: 68%;
+  top: 70%;
+  left: 62%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-487 {
   position: fixed;
-  top: 45%;
-  left: 76%;
+  top: 27%;
+  left: 69%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-488 {
   position: fixed;
-  top: 86%;
-  left: 16%;
+  top: 27%;
+  left: 45%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-489 {
   position: fixed;
-  top: 1%;
-  left: 9%;
+  top: 17%;
+  left: 39%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-490 {
   position: fixed;
-  top: 16%;
-  left: 53%;
+  top: 76%;
+  left: 42%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-491 {
   position: fixed;
-  top: 52%;
-  left: 94%;
+  top: 6%;
+  left: 38%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-492 {
   position: fixed;
-  top: 25%;
-  left: 25%;
+  top: 56%;
+  left: 3%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-493 {
   position: fixed;
-  top: 80%;
-  left: 22%;
+  top: 3%;
+  left: 42%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-494 {
   position: fixed;
-  top: 84%;
-  left: 57%;
+  top: 7%;
+  left: 60%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-495 {
   position: fixed;
-  top: 81%;
-  left: 45%;
+  top: 96%;
+  left: 76%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-496 {
   position: fixed;
-  top: 8%;
-  left: 43%;
+  top: 84%;
+  left: 90%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-497 {
   position: fixed;
-  top: 88%;
-  left: 84%;
+  top: 91%;
+  left: 3%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-498 {
   position: fixed;
-  top: 92%;
-  left: 59%;
+  top: 60%;
+  left: 52%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }
 
 #star-499 {
   position: fixed;
-  top: 78%;
-  left: 32%;
+  top: 13%;
+  left: 6%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }

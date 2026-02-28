@@ -5,6 +5,7 @@ const starsCss = (length) => {
   position: fixed;
   top: ${random(0, 100)}%;
   left: ${random(0, 100)}%;
+  animation: blinkStar 1.5s linear infinite alternate-reverse;
 }`;
     pOfStars.push(star);
   }
