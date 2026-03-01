@@ -1,6 +1,6 @@
 const randomTop = () => Math.round(Math.random() * -100);
 const randomLeft = () => Math.round(Math.random() * 100);
-const randomSize = () => Math.round(Math.random() * 5);
+const randomSize = () => Math.round(Math.random() * 3);
 const randomTime = (low, high) =>
   Math.round(Math.random() * low + (high - low));
 
