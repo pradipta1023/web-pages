@@ -1,0 +1,16 @@
+{
+  "version": "5",
+  "specifiers": {
+    "npm:eta@^4.5.1": "4.5.1"
+  },
+  "npm": {
+    "eta@4.5.1": {
+      "integrity": "sha512-EaNCGm+8XEIU7YNcc+THptWAO5NfKBHHARxt+wxZljj9bTr/+arRoOm9/MpGt4n6xn9fLnPFRSoLD0WFYGFUxQ=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:eta@^4.5.1"
+    ]
+  }
+}
