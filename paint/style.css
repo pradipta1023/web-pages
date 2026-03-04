@@ -1,0 +1,34 @@
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ababab;
+}
+
+canvas {
+  border: 2px solid black;
+}
+
+.options-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+}
+
+p {
+  border: 2px solid black;
+  height: 1em;
+  width: 1.5em;
+  margin: 0.2em 1em;
+  font-size: 3em;
+  text-align: center;
+}
+
+#eraser {
+  padding: 0.25em;
+  font-size: 2em;
+}
+
+p:hover {
+  cursor: pointer;
+}
