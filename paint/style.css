@@ -12,7 +12,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px;
+  width: 92%;
 }
 
 p {
@@ -31,4 +31,31 @@ p {
 
 p:hover {
   cursor: pointer;
+}
+
+.canvas-color-options {
+  display: flex;
+  justify-content: center;
+  column-gap: 1%;
+}
+
+.color-box {
+  height: 0.3em;
+  width: 0.6em;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: green;
 }

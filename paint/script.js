@@ -20,16 +20,21 @@ const getCanvasCoordinates = (event, canvas) => {
 
 const startDrawing = (context, event, canvas, drawingTool) => {
   context.lineWidth = drawingTool.lineWidth;
-  context.strokeStyle = drawingTool.strokeStyle;
+  if (drawingTool.name === "eraser") {
+    context.globalCompositeOperation = "destination-out";
+  } else {
+    context.globalCompositeOperation = "source-over";
+    context.strokeStyle = drawingTool.strokeStyle;
+  }
   context.beginPath();
   const { currentX, currentY } = getCanvasCoordinates(event, canvas);
   context.moveTo(currentX, currentY);
 };
 
 const tools = {
-  pencil: { name: "pencil", lineWidth: 2, strokeStyle: "black" },
-  line: { name: "line", lineWidth: 3, strokeStyle: "black" },
-  eraser: { name: "eraser", lineWidth: 40, strokeStyle: "white" },
+  pencil: { name: "pencil", lineWidth: 2 },
+  line: { name: "line", lineWidth: 3 },
+  eraser: { name: "eraser", lineWidth: 40 },
 };
 
 const validTools = ["pencil", "line", "eraser"];
@@ -41,6 +46,7 @@ window.onload = () => {
   const canvas = document.querySelector("canvas");
   const options = document.querySelector(".options-box");
   const context = canvas.getContext("2d");
+
   let drawingTool = { name: "pencil", width: 2 };
   let toDraw = false;
 
@@ -58,7 +64,7 @@ window.onload = () => {
     const { currentX, currentY } = getCanvasCoordinates(event, canvas);
 
     canvas.style.background = toDraw
-      ? `radial-gradient(circle 30px at ${currentX}px ${currentY}px, orange 20%, transparent 5%)`
+      ? `radial-gradient(circle ${drawingTool.lineWidth}px at ${currentX}px ${currentY}px, orange 20%, transparent 5%)`
       : "";
     if (["pencil", "eraser"].includes(drawingTool.name)) {
       drawWithPencil(context, currentX, currentY, toDraw);
@@ -68,7 +74,8 @@ window.onload = () => {
   canvas.addEventListener("mouseup", (event) => {
     toDraw = false;
     if (drawingTool.name === "line") {
-      drawLine(context, event.clientX, event.clientY);
+      const {currentX, currentY} = getCanvasCoordinates(event, canvas);
+      drawLine(context, currentX, currentY);
     }
   });
 };
