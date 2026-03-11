@@ -44,18 +44,22 @@ p:hover {
   width: 0.6em;
 }
 
-.red {
+#red {
   background-color: red;
 }
 
-.blue {
+#blue {
   background-color: blue;
 }
 
-.black {
+#black {
   background-color: black;
 }
 
-.green {
+#green {
   background-color: green;
+}
+
+#yellow {
+  background-color: yellow;
 }

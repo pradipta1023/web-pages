@@ -3,22 +3,24 @@
   <head>
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <div class="canvas-color-options">
       <canvas class="canvas" width="1000px" height="800px"></canvas>
       <div class="color-options">
-        <p class="red color-box"></p>
-        <p class="blue color-box"></p>
-        <p class="black color-box"></p>
-        <p class="green color-box"></p>
+        <p id="red" class="color-box"></p>
+        <p id="blue" class="color-box"></p>
+        <p id="black" class="color-box"></p>
+        <p id="green" class="color-box"></p>
+        <p id="yellow" class="color-box"></p>
       </div>
     </div>
     <div class="options-box">
       <p id="line">/</p>
       <p id="pencil">✎</p>
       <p id="eraser">🧽</p>
+      <p id="rectangle">⊡</p>
     </div>
   </body>
 </html>
