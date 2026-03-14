@@ -11,12 +11,15 @@ const tools = {
     lineWidth: 2,
     cursor: `url('pencil-cursor.svg') -24 24, crosshair`,
   },
+
   line: { name: "line", lineWidth: 3, cursor: "crosshair" },
+
   eraser: {
     name: "eraser",
     lineWidth: 40,
     cursor: `url('eraser-cursor.svg') -24 24, crosshair`,
   },
+
   rectangle: { name: "rectangle", lineWidth: 3, cursor: "crosshair" },
 };
 
@@ -29,45 +32,62 @@ const setTool = (target, drawingTool) =>
 const setColor = (target, colorSelected) =>
   validColors.includes(target.id) ? target.id : colorSelected;
 
+const init = () => ({
+  color: "black",
+  drawingTool: tools.pencil,
+  toDraw: false,
+  snapshot: null,
+});
+
+const initElements = () => ({
+  options: document.querySelector(".options-box"),
+  colorOptions: document.querySelector(".color-options"),
+  canvas: document.querySelector("canvas"),
+});
+
 window.onload = () => {
-  const options = document.querySelector(".options-box");
-  const colorOptions = document.querySelector(".color-options");
+  const { options, colorOptions, canvas } = initElements();
 
-  const canvas = document.querySelector("canvas");
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d", {
+    willReadFrequently: true,
+  });
 
-  let colorSelected = "black";
+  let { color, drawingTool: tool, toDraw, snapshot } = init();
+
   canvas.style.cursor = "url('pencil-cursor.svg') -24 24, crosshair";
-  let drawingTool = {
-    name: "pencil",
-    width: 2,
-    cursor: `url('pencil-cursor.svg') -24 24, crosshair`,
-  };
-  let toDraw = false;
 
   colorOptions.addEventListener(
     "click",
-    ({ target }) => (colorSelected = setColor(target, colorSelected)),
+    ({ target }) => (color = setColor(target, color)),
   );
 
   options.addEventListener("click", ({ target }) => {
-    drawingTool = setTool(target, drawingTool);
-    canvas.style.cursor = drawingTool.cursor || canvas.style.cursor;
+    tool = setTool(target, tool);
+    canvas.style.cursor = tool.cursor || canvas.style.cursor;
   });
 
   canvas.addEventListener("mousedown", (event) => {
-    toDraw = true;
-    drawingTool = startDrawing(ctx, event, canvas, drawingTool, colorSelected);
+    [toDraw, snapshot, tool] = handleMouseDown(event, ctx, tool, canvas, color);
   });
 
   canvas.addEventListener("mousemove", (event) => {
-    draw(canvas, toDraw, drawingTool, ctx, event);
+    draw(canvas, toDraw, tool, ctx, event, snapshot);
   });
 
   canvas.addEventListener("mouseup", (event) => {
-    toDraw = false;
-    const { x, y } = getCanvasCoordinates(event, canvas);
-    canvas.style.background = `radial-gradient(circle ${drawingTool.lineWidth}px at ${x}px ${y}px, transparent 20%, transparent 5%)`;
-    endDrawing(event, ctx, drawingTool, canvas);
+    [toDraw, snapshot] = handleMouseUp(event, ctx, tool, canvas, snapshot);
   });
+};
+
+const handleMouseUp = (event, ctx, tool, canvas, snapshot) => {
+  const { x, y } = getCanvasCoordinates(event, canvas);
+  canvas.style.background = `radial-gradient(circle ${tool.lineWidth}px at ${x}px ${y}px, transparent 20%, transparent 5%)`;
+  endDrawing(event, ctx, tool, canvas, snapshot);
+  return [false, null];
+};
+
+const handleMouseDown = (event, ctx, tool, canvas, color) => {
+  tool = startDrawing(ctx, event, canvas, tool, color);
+  const snapshot = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  return [true, snapshot, tool];
 };

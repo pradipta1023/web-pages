@@ -1,4 +1,5 @@
 import { drawLine, drawWithPencil, drawRect } from "/drawing_tools.js";
+import { drawLinePreview, drawRectPreview } from "./preview.js";
 
 export const getCanvasCoordinates = (event, canvas) => {
   const canvasPosition = canvas.getBoundingClientRect();
@@ -8,25 +9,27 @@ export const getCanvasCoordinates = (event, canvas) => {
   };
 };
 
-export const startDrawing = (context, event, canvas, drawingTool, color) => {
-  context.lineWidth = drawingTool.lineWidth;
-  if (drawingTool.name === "eraser") {
-    context.globalCompositeOperation = "destination-out";
-  } else {
-    context.globalCompositeOperation = "source-over";
-    context.strokeStyle = color;
-  }
+export const startDrawing = (context, event, canvas, tool, color) => {
+  context.lineWidth = tool.lineWidth;
+
+  context.globalCompositeOperation =
+    tool.name === "eraser" ? "destination-out" : "source-over";
+
+  context.strokeStyle = color;
+
   context.beginPath();
   const { x, y } = getCanvasCoordinates(event, canvas);
+  [tool.startX, tool.startY] = [x, y];
 
-  drawingTool.name === "line"
-    ? context.moveTo(x, y)
-    : ([drawingTool.startX, drawingTool.startY] = [x, y]);
-
-  return drawingTool;
+  return tool;
 };
 
-export const draw = (canvas, toDraw, tool, context, event) => {
+const previewTools = {
+  rectangle: drawRectPreview,
+  line: drawLinePreview,
+};
+
+export const draw = (canvas, toDraw, tool, context, event, snapshot) => {
   const { x, y } = getCanvasCoordinates(event, canvas);
 
   if (toDraw) {
@@ -36,16 +39,20 @@ export const draw = (canvas, toDraw, tool, context, event) => {
   if (["pencil", "eraser"].includes(tool.name)) {
     drawWithPencil(context, x, y, toDraw);
   }
+
+  if (snapshot) {
+    previewTools[tool.name]?.(context, tool, { x, y }, snapshot);
+  }
 };
 
-export const endDrawing = (event, context, drawingTool, canvas) => {
-  if (drawingTool.name === "line") {
-    const { x, y } = getCanvasCoordinates(event, canvas);
-    drawLine(context, x, y);
-  }
-  if (drawingTool.name === "rectangle") {
-    const { startX: x, startY: y } = drawingTool;
-    const endCoordinates = getCanvasCoordinates(event, canvas);
-    drawRect(context, { x, y }, endCoordinates);
-  }
+const drawingTools = {
+  line: drawLine,
+  rectangle: drawRect,
+};
+
+export const endDrawing = (event, context, tool, canvas, snapshot) => {
+  const { startX: x, startY: y } = tool;
+  const end = getCanvasCoordinates(event, canvas);
+
+  drawingTools[tool.name]?.(context, { x, y }, end, snapshot);
 };
