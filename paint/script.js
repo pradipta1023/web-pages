@@ -1,43 +1,11 @@
 import {
-  draw,
-  endDrawing,
-  startDrawing,
-  getCanvasCoordinates,
-} from "/drawing.js";
-
-const tools = {
-  pencil: {
-    name: "pencil",
-    lineWidth: 2,
-    cursor: `url('pencil-cursor.svg') -24 24, crosshair`,
-  },
-
-  line: { name: "line", lineWidth: 3, cursor: "crosshair" },
-
-  eraser: {
-    name: "eraser",
-    lineWidth: 40,
-    cursor: `url('eraser-cursor.svg') -24 24, crosshair`,
-  },
-
-  rectangle: { name: "rectangle", lineWidth: 3, cursor: "crosshair" },
-};
-
-const validTools = ["pencil", "line", "eraser", "rectangle"];
-const validColors = ["red", "black", "green", "blue", "yellow"];
-
-const setTool = (target, drawingTool) =>
-  validTools.includes(target.id) ? tools[target.id] : drawingTool;
-
-const setColor = (target, colorSelected) =>
-  validColors.includes(target.id) ? target.id : colorSelected;
-
-const init = () => ({
-  color: "black",
-  drawingTool: tools.pencil,
-  toDraw: false,
-  snapshot: null,
-});
+  handleMouseDown,
+  handleMouseMove,
+  handleMouseUp,
+  init,
+  setColor,
+  setTool,
+} from "./handlers.js";
 
 const initElements = () => ({
   options: document.querySelector(".options-box"),
@@ -71,23 +39,10 @@ window.onload = () => {
   });
 
   canvas.addEventListener("mousemove", (event) => {
-    draw(canvas, toDraw, tool, ctx, event, snapshot);
+    handleMouseMove(canvas, toDraw, tool, ctx, event, snapshot);
   });
 
   canvas.addEventListener("mouseup", (event) => {
     [toDraw, snapshot] = handleMouseUp(event, ctx, tool, canvas, snapshot);
   });
-};
-
-const handleMouseUp = (event, ctx, tool, canvas, snapshot) => {
-  const { x, y } = getCanvasCoordinates(event, canvas);
-  canvas.style.background = `radial-gradient(circle ${tool.lineWidth}px at ${x}px ${y}px, transparent 20%, transparent 5%)`;
-  endDrawing(event, ctx, tool, canvas, snapshot);
-  return [false, null];
-};
-
-const handleMouseDown = (event, ctx, tool, canvas, color) => {
-  tool = startDrawing(ctx, event, canvas, tool, color);
-  const snapshot = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  return [true, snapshot, tool];
 };
